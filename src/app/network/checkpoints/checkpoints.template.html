@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-block">
+        <h4 class="card-title">
+            {{headline}}
+        </h4>
+        <p class="card-text">
+            {{subhead}}
+        </p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let item of checkpoints">
+            <div class="row">
+                <div class="col-xs-10">
+                    <a href="#">
+                        {{item.name}}
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    {{item.score}}
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="card-block">
+        <a href="#" class="btn btn-primary btn-sm"> GO TO RESULTS</a>
+    </div>
+</div>

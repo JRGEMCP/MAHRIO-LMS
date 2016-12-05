@@ -1,0 +1,13 @@
+{
+  "name": "mahrio-lms",
+  "description": "Mahr.io - Learning Management System",
+  "main": "",
+  "authors": [
+    "Jesus Rocha <jesus.rocha@whichdegree.co>"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.5",
+    "font-awesome": "^4.7.0"
+  }
+}

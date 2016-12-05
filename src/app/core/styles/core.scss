@@ -1,0 +1,86 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'font-awesome/scss/font-awesome';
+@import './font-awesome-extend';
+@import './variables';
+@import './colors';
+
+@media only screen and (min-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 57px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .sidebar-250 {
+    width: 250px;
+  }
+  .main {
+    margin-left: 250px;
+  }
+  .navbar-default {
+    background: $white-smoke;
+    border-bottom: 1px solid $white-dark-smoke;
+    border-right: 1px solid $white-dark-smoke;
+  }
+  .brand-corner {
+    width: 220px;
+    float: left;
+    text-align: center;
+    padding: 0;
+    font-size: 27px;
+  }
+  .container-fluid .main {
+    margin-top: 57px;
+    .container-fluid {
+      padding-top: 15px;
+    }
+  }
+  .icon-block.s60 {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+  }
+  .page-section {
+    padding: 40px 0;
+  }
+  .label {
+    display: inline;
+    font-size: 75%;
+    font-weight: bold;
+    line-height: 1;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    padding: 0.2em 0.6em 0.3em;
+    border-radius: 0.25em;
+  }
+  .label {
+    font-size: 12px;
+    line-height: 1.5;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 2px;
+  }
+  .icon-block {
+    &.s30 {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-size: 15px;
+    }
+    &.s60 {
+      width: 60px;
+      height: 60px;
+      line-height: 30px;
+      font-size: 25px;
+    }
+  }
+}

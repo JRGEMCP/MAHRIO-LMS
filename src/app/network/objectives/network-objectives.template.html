@@ -1,0 +1,16 @@
+<h2>What you'll learn</h2>
+<p>A minus obcaecati optio pariatur porro.</p>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let objective of objectives">
+        <div class="media">
+            <div class="media-left">
+                <div class="icon-block text-xs-center text-white rounded-circle" [ngClass]="objective.iconClass">
+                    <i class="fa fa-fw" [ngClass]="objective.icon"></i>
+                </div>
+            </div>
+            <div class="media-body">
+                {{objective.name}}
+            </div>
+        </div>
+    </li>
+</ul>
