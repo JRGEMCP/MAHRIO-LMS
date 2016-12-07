@@ -13,7 +13,7 @@ npm install
 Start express server:
 
 ```
-npm server
+npm start
 ```
 
 ## Webpack
