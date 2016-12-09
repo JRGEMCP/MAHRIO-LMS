@@ -13,9 +13,13 @@
     <div class="main">
         <button class="navbar-toggler hidden-lg-up" type="button" (click)="isCollapsed = !isCollapsed"></button>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" id="search-component">
+                <template #rt let-r="result" let-t="term">
+                    <img [src]="'https://upload.wikimedia.org/wikipedia/commons/thumb/' + r.flag" width="16">
+                    <span [innerHTML]="r.name"></span>
+                </template>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for...">
+                    <input type="text" class="form-control" placeholder="Search for..." [(ngModel)]="model" [ngbTypeahead]="search" [resultTemplate]="rt" [inputFormatter]="formatter" >
                     <span class="input-group-btn">
                         <button class="btn btn-primary" type="button">Go!</button>
                     </span>

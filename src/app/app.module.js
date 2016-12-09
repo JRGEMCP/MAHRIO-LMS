@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import 'rxjs/add/operator/map';
@@ -33,6 +34,7 @@ import { Error404 } from './error/error-404.component';
 @NgModule({
   imports: [
     BrowserModule,
+    FormsModule,
     RouterModule.forRoot(AppRoutes),
     NgbModule.forRoot(),
   ],
