@@ -5,6 +5,7 @@
   "scripts": {
     "start": "./node_modules/.bin/webpack --progress --profile --bail && node server.js",
     "build": "./node_modules/.bin/webpack --progress --profile --bail",
+    "clean": "rm -rf ./node_modules && rm -rf ./bower_components && rm -rf ./public",
     "watch": "./node_modules/.bin/webpack --progress --profile --bail --watch",
     "server": "node server.js",
     "test": "npm run unit && npm run e2e",
