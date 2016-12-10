@@ -1,3 +1,14 @@
+<div class="pull-right">
+    <div class="btn-group btn-group-lg" role="group">
+        <button class="btn btn-secondary" (click)="card = false;">
+            <i class="fa fa-list"></i>
+        </button>
+        <button class="btn btn-secondary" (click)="card = true;">
+            <i class="fa fa-th-large"></i>
+        </button>
+    </div>
+</div>
+
 <h1>
     {{ message }}
 </h1>
@@ -8,7 +19,8 @@
 </div>
 
 <div *ngIf="networks.length" style="overflow: hidden">
-    <network-list [networks]="networks" *ngIf="networks.length"></network-list>
+    <network-list [networks]="networks" *ngIf="!card && networks.length"></network-list>
+    <network-card [networks]="networks" *ngIf="card && networks.length"></network-card>
 
     <div class="text-md-right">
         <ngb-pagination [collectionSize]="50" [(page)]="currentPage" (pageChange)="pageChange()"></ngb-pagination>

@@ -20,6 +20,7 @@ import { NetworkMembership } from './network/membership/membership.component';
 import { NetworkCheckpoints } from './network/checkpoints/checkpoints.component';
 import { NetworkObjectives } from './network/objectives/network-objectives.component';
 import { NetworkList } from './network/list/network-list.component';
+import { NetworkCard } from './network/card/network-card.component';
 import { NetworkShow } from './network/show/network-show.component';
 import { User } from './user/user.component';
 
@@ -49,6 +50,7 @@ import { Error404 } from './error/error-404.component';
     NetworkCheckpoints,
     NetworkObjectives,
     NetworkList,
+    NetworkCard,
     NetworkShow,
     MiddleAlign,
     NgbdStarRating,

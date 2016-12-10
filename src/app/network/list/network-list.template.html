@@ -1,21 +1,36 @@
-<div class="card-deck-wrapper" *ngFor="let deck of networks">
-    <div class="card-deck">
-        <template ngFor let-item="$implicit" [ngForOf]="deck" let-i="index">
-            <div class="card" [routerLink]="['/networks/'+item.title]">
-                <div class="card-block">
-                    <h4 class="card-title">{{item.title}}</h4>
-                    <p class="card-text">{{item.description}}</p>
-                </div>
-                <div class="card-instructor">
-                    <div>
-                        <i class="fa fa-user fa-3x"></i>
+<div *ngFor="let deck of networks">
+    <template ngFor let-item="$implicit" [ngForOf]="deck" let-i="index">
+        <div class="card" style="padding-bottom: 0;" [routerLink]="['/networks/'+item.title]">
+            <div class="media">
+                <div class="media-left">
+                    <div class="cover overlay cover-image-full hover" style="height: 150px; width: 150px;">
+                        <span class="img icon-block height-150 bg-white-snow">
+                            <span style="line-height: 140px;">
+                                <i class="fa fa-image"></i>
+                            </span>
+                        </span>
                     </div>
-                    <div class="main">
-                        <h6>{{item.instructor}}</h6>
-                        Instructor
+                </div>
+                <div class="media-body">
+                    <div class="card-block">
+                        <h4 class="card-title">{{item.title}}</h4>
+                        <p class="card-text">{{item.description}}</p>
+                    </div>
+
+                </div>
+                <div class="media-right">
+                    <ngbd-star-rating class="pull-right" style="min-width:300px; margin: 10px 0; font-size: 1.5em; text-align: center;"></ngbd-star-rating>
+                    <div class="card-instructor card-footer bg-white-snow" style="max-height: 100px;">
+                        <div style="max-height: 90px; line-height: 50px;">
+                            <i class="fa fa-user fa-3x" style=" width: 50px;margin-right: 10px;text-align: center;"></i>
+                        </div>
+                        <div class="main">
+                            <h6>{{item.instructor}}</h6>
+                            Instructor
+                        </div>
                     </div>
                 </div>
             </div>
-        </template>
-    </div>
+        </div>
+    </template>
 </div>
