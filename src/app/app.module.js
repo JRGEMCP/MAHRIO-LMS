@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MarketingModule } from './_marketing/src/marketing.module';
+import { StudentModule } from './_student/src/student.module';
+import { InstructorModule } from './_instructor/src/instructor.module';
 import 'rxjs/add/operator/map';
 
 import { CapitalizePipe } from './core/pipes/capitalize.pipe';
@@ -36,6 +39,9 @@ import { Error404 } from './error/error-404.component';
   imports: [
     BrowserModule,
     FormsModule,
+    MarketingModule,
+    StudentModule,
+    InstructorModule,
     RouterModule.forRoot(AppRoutes),
     NgbModule.forRoot(),
   ],

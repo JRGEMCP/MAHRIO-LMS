@@ -1,0 +1,43 @@
+<div class="navbar navbar-default navbar-fixed-top no-radius" style="font-size: 1.1em; background: white; line-height: 43px;">
+    <div class="media container" style="overflow: visible">
+        <div class="media-left" style="vertical-align: middle">
+            <h1><a [routerLink]="['/']">LMS</a></h1>
+        </div>
+        <div class="media-body" style="overflow: visible; vertical-align: middle">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['/m/networks']">
+                        Courses
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="media-right" style="min-width: 300px; vertical-align: middle">
+            <ul class="nav nav-pills pull-right">
+                <li class="nav-item">
+                    <a class="btn btn-primary" [routerLink]="['/m/login']">
+                        LOGIN
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="btn-group">
+                        <a class="btn btn-primary" [routerLink]="['/m/register']">
+                            REGISTER
+                        </a>
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="drop2 = !drop2" href="javascript:void(0)">
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <div class="dropdown-menu" [ngbCollapse]="!drop2">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

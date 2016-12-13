@@ -1,0 +1,39 @@
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
+import template from './marketing.template.html';
+
+@Component({
+  template
+})
+
+export class MarketingComponent {
+  static get parameters(){
+    return [ActivatedRoute, Router];
+  }
+  constructor( route, router ){
+    this.view = route.params.value.view;
+    this.router = router;
+  }
+  ngOnInit(){
+    switch( this.view ) {
+      case 'networks':
+      case 'register':
+      case 'login':
+        console.log( this.view );
+        break;
+      default:
+        this.view = 'null';
+      //this.router.navigateTo('s/dashboard');
+      //redirect to dashboard
+    }
+    this.router.events.subscribe((event) => {
+      if( event.state ) {
+        var match = event.url.match( /m\/(.*?)$/ );
+        if( match && match.length > 1) {
+          this.view = match[1];
+        }
+      }
+    });
+  }
+}

@@ -6,11 +6,6 @@ import { ErrorRoutes } from './error/error-404.routes';
 
 
 export const AppRoutes = [
-  {
-    path: '',
-    pathMatch: 'full',
-    redirectTo: 'dashboard',
-  },
   ...ConversationRoutes,
   ...DashboardRoutes,
   ...NetworkRoutes,

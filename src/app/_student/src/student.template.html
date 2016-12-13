@@ -1,0 +1,27 @@
+<student-top-nav></student-top-nav>
+<div class="container-fluid">
+    <div class="row">
+        <student-left-nav></student-left-nav>
+
+        <div class="main">
+            <div class="container-fluid">
+                <div [ngSwitch]="view">
+                    <div *ngSwitchCase="'dashboard'">
+                        <student-dashboard></student-dashboard>
+                    </div>
+                    <div *ngSwitchCase="'networks'">
+                        <student-networks></student-networks>
+                    </div>
+                    <div *ngSwitchCase="'students'">
+                        <students></students>
+                    </div>
+                    <div *ngSwitchCase="'chats'">
+                        <student-chats></student-chats>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

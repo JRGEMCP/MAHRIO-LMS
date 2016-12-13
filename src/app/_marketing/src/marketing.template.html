@@ -1,0 +1,21 @@
+<marketing-top-nav></marketing-top-nav>
+<div class="container-fluid" style="margin-top: 100px;">
+    <div class="row">
+        <div class="col-xs-12">
+            <div [ngSwitch]="view">
+                <div *ngSwitchCase="'null'">
+                    <marketing-carousel></marketing-carousel>
+                </div>
+                <div *ngSwitchCase="'login'">
+                    <sign-in></sign-in>
+                </div>
+                <div *ngSwitchCase="'register'">
+                    <register></register>
+                </div>
+                <div *ngSwitchCase="'networks'">
+                    <marketing-networks></marketing-networks>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
