@@ -6,7 +6,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MarketingComponent } from './marketing.component';
 import { SignIn } from './core/components/sign-in/sign-in.component';
 import { Register } from './core/components/register/register.component';
-import { MarketingNetworks } from './core/components/networks/networks.component';
+import { MarketingNetworks } from './core/components/courses/networks.component';
+import { MarketingChats } from './core/components/conversations/chats.component';
+import { MarketingUsers } from './core/components/comrades/users.component';
 import { MarketingRoutes } from './marketing.routes';
 
 import { MarketingTopNav } from './core/components/nav/top.component';
@@ -24,6 +26,8 @@ import { MarketingCarousel } from './core/components/carousel/carousel.component
     SignIn,
     Register,
     MarketingNetworks,
+    MarketingChats,
+    MarketingUsers,
     MarketingComponent
   ],
   bootstrap: [MarketingComponent]

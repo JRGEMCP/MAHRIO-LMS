@@ -19,8 +19,8 @@
 </div>
 
 <div *ngIf="networks.length" style="overflow: hidden">
-    <network-list [networks]="networks" *ngIf="!card && networks.length"></network-list>
-    <network-card [networks]="networks" *ngIf="card && networks.length"></network-card>
+    <!--<network-list [networks]="networks" *ngIf="!card && networks.length"></network-list>-->
+    <!--<network-card [networks]="networks" *ngIf="card && networks.length"></network-card>-->
 
     <div class="text-md-right">
         <ngb-pagination [collectionSize]="50" [(page)]="currentPage" (pageChange)="pageChange()"></ngb-pagination>

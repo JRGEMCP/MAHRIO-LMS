@@ -17,15 +17,16 @@ export class MarketingComponent {
   }
   ngOnInit(){
     switch( this.view ) {
-      case 'networks':
+      case 'courses':
       case 'register':
       case 'login':
-        console.log( this.view );
+      case 'conversations':
+      case 'comrades':
         break;
       default:
         this.view = 'null';
-      //this.router.navigateTo('s/dashboard');
-      //redirect to dashboard
+      //this.router.navigateTo('m/dashboard');
+      //or redirect to m/404
     }
     this.router.events.subscribe((event) => {
       if( event.state ) {

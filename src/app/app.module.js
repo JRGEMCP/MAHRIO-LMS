@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MarketingModule } from './_marketing/src/marketing.module';
 import { StudentModule } from './_student/src/student.module';
 import { InstructorModule } from './_instructor/src/instructor.module';
+import { OwnerModule } from './_owner/src/owner.module';
 import 'rxjs/add/operator/map';
 
 import { CapitalizePipe } from './core/pipes/capitalize.pipe';
@@ -14,7 +15,6 @@ import { EncodeURIPipe } from './core/pipes/encore-uri.pipe';
 import { AppRoutes } from './app.routes';
 
 import { MahrioApp } from './app.component';
-import { Conversation } from './conversation/conversation.component';
 import { Dashboard } from './dashboard/dashboard.component';
 import { Network } from './network/network.component';
 import { NetworkRecentProgress } from './network/recent-progress/recent-progress.component';
@@ -42,12 +42,12 @@ import { Error404 } from './error/error-404.component';
     MarketingModule,
     StudentModule,
     InstructorModule,
+    OwnerModule,
     RouterModule.forRoot(AppRoutes),
     NgbModule.forRoot(),
   ],
   declarations: [
     MahrioApp,
-    Conversation,
     Dashboard,
     Network,
     NetworkRecentProgress,

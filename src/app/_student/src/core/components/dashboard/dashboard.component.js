@@ -10,6 +10,9 @@ import style from './dashboard.style.scss';
 })
 export class StudentDashboard {
   constructor() {
-    this.message = 'Dashboard';
+    this.heading = 'Dashboard'
+    this.message = 'Your subscription ends on <b>25 February 2015</b>';
+    this.icon = 'fa-credit-card';
+    this.buttonLabel = 'Upgrade';
   }
 }

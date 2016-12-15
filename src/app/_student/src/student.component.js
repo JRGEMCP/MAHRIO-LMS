@@ -22,8 +22,8 @@ export class StudentComponent {
   ngOnInit(){
     switch( this.view ) {
       case 'dashboard':
-      case 'networks':
-      case 'users':
+      case 'courses':
+      case 'classmates':
       case 'chats':
         console.log( this.view );
         break;

@@ -19,6 +19,12 @@
 </div>
 
 <div *ngIf="networks.length" style="overflow: hidden">
-    <h1>THIS IS THE LOADED BODY</h1>
+    <cards [networks]="networks" *ngIf="card && networks.length"></cards>
+    <list [networks]="networks" *ngIf="!card && networks.length"></list>
+
+    <div class="text-md-right">
+        <ngb-pagination [collectionSize]="50" [(page)]="currentPage" (pageChange)="pageChange()"></ngb-pagination>
+    </div>
+
 </div>
 

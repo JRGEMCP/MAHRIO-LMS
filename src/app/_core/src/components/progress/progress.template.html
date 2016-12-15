@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-block">
+        <h4 class="card-title">
+            {{headline}}
+        </h4>
+        <p class="card-text">
+            {{subhead}}
+        </p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item" *ngFor="let item of recentProgress">
+            <div class="row">
+                <div class="col-xs-8">
+                    <a href="#">
+                        {{item.name}}
+                    </a>
+                </div>
+                <div class="col-xs-4">
+                    <progress class="progress" value="25" max="100" aria-describedby="example-caption-2"></progress>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="card-block text-md-right">
+        <a href="#" class="btn btn-secondary btn-sm"> View all</a>
+    </div>
+</div>

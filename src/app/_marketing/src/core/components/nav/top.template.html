@@ -1,43 +1,61 @@
 <div class="navbar navbar-default navbar-fixed-top no-radius" style="font-size: 1.1em; background: white; line-height: 43px;">
-    <div class="media container" style="overflow: visible">
+    <div class="media" style="overflow: visible">
         <div class="media-left" style="vertical-align: middle">
             <h1><a [routerLink]="['/']">LMS</a></h1>
         </div>
         <div class="media-body" style="overflow: visible; vertical-align: middle">
-            <ul class="nav nav-pills">
+            <ul class="nav nav-pills pull-left">
                 <li class="nav-item">
-                    <a class="nav-link" [routerLink]="['/m/networks']">
+                    <a class="nav-link" [routerLink]="['/m/courses']">
                         Courses
                     </a>
                 </li>
-            </ul>
-        </div>
-        <div class="media-right" style="min-width: 300px; vertical-align: middle">
-            <ul class="nav nav-pills pull-right">
                 <li class="nav-item">
-                    <a class="btn btn-primary" [routerLink]="['/m/login']">
-                        LOGIN
+                    <a class="nav-link" [routerLink]="['/m/conversations']">
+                        Conversations
                     </a>
                 </li>
                 <li class="nav-item">
-                    <div class="btn-group">
-                        <a class="btn btn-primary" [routerLink]="['/m/register']">
-                            REGISTER
-                        </a>
-                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="drop2 = !drop2" href="javascript:void(0)">
-                            <span class="sr-only">Toggle Dropdown</span>
-                        </button>
-                        <div class="dropdown-menu" [ngbCollapse]="!drop2">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Separated link</a>
-                        </div>
-                    </div>
+                    <a class="nav-link" [routerLink]="['/m/comrades']">
+                        Comrades
+                    </a>
                 </li>
             </ul>
+            <form class="form-inline pull-right" style="padding: 0.5em 1em;">
+                <div class="form-group">
+                    <label for="exampleInputEmail2">Email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
+                </div>
+                <button type="submit" class="btn btn-primary">Send invitation</button>
+            </form>
         </div>
+        <!--<div class="media-right" style="min-width: 300px; vertical-align: middle">-->
+
+            <!--<ul class="nav nav-pills pull-right">-->
+                <!--<li class="nav-item">-->
+                    <!--<a class="btn btn-primary" [routerLink]="['/m/login']">-->
+                        <!--LOGIN-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                    <!--<div class="btn-group">-->
+                        <!--<a class="btn btn-primary" [routerLink]="['/m/register']">-->
+                            <!--REGISTER-->
+                        <!--</a>-->
+                        <!--<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"-->
+                                <!--data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="drop2 = !drop2" href="javascript:void(0)">-->
+                            <!--<span class="sr-only">Toggle Dropdown</span>-->
+                        <!--</button>-->
+                        <!--<div class="dropdown-menu" [ngbCollapse]="!drop2">-->
+                            <!--<a class="dropdown-item" href="#">Action</a>-->
+                            <!--<a class="dropdown-item" href="#">Another action</a>-->
+                            <!--<a class="dropdown-item" href="#">Something else here</a>-->
+                            <!--<div class="dropdown-divider"></div>-->
+                            <!--<a class="dropdown-item" href="#">Separated link</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
     </div>
 </div>

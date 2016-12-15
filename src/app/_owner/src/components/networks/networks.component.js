@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
 
-import template from './student-networks.template.html';
-import style from './student-networks.style.scss';
+import template from './networks.template.html';
 
 @Component({
-  selector: 'student-networks',
+  selector: 'owner-networks',
   template,
-  styles: [style],
 })
-export class StudentNetworks {
+export class OwnerNetworks {
   constructor() {
     this.message = 'Courses';
     this.networks = [];

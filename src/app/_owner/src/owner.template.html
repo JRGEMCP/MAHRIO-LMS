@@ -1,0 +1,27 @@
+<owner-top-nav></owner-top-nav>
+<div class="container-fluid">
+    <div class="row">
+        <owner-left-nav></owner-left-nav>
+
+        <div class="main">
+            <div class="container-fluid">
+                <div [ngSwitch]="view">
+                    <div *ngSwitchCase="'analysis'">
+                        <owner-dashboard></owner-dashboard>
+                    </div>
+                    <div *ngSwitchCase="'networks'">
+                        <owner-networks></owner-networks>
+                    </div>
+                    <div *ngSwitchCase="'users'">
+                        <owner-users></owner-users>
+                    </div>
+                    <div *ngSwitchCase="'support'">
+                        <owner-chats></owner-chats>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

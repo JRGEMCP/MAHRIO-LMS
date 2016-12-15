@@ -12,5 +12,6 @@ import style from './conversation.style.scss';
 export class Conversation {
   constructor() {
     this.message = 'Conversations';
+    console.log('in here too');
   }
 }

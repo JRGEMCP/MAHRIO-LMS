@@ -1,0 +1,17 @@
+<div class="card" *ngFor="let message of chats">
+    <div class="media">
+        <div class="media-left" style="vertical-align: middle">
+            <i class="fa fa-user fa-fw" style="margin: 10px; font-size: 3em;"></i>
+        </div>
+        <div class="media-body" style="vertical-align: middle">
+            <h3>
+                {{message._owner._profile.firstName}}
+                {{message._owner._profile.lastName}}
+            </h3>
+            <i class="fa fa-clock-o fa-fw"></i> {{message.date}}
+        </div>
+    </div>
+    <div style="margin: 0 10px 10px 10px;">
+        {{message.body}}
+    </div>
+</div>

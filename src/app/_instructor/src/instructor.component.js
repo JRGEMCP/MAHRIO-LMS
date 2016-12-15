@@ -22,14 +22,13 @@ export class InstructorComponent {
   ngOnInit(){
     switch( this.view ) {
       case 'dashboard':
-      case 'networks':
-      case 'users':
-      case 'chats':
-        console.log( this.view );
+      case 'courses':
+      case 'students':
+      case 'discussions':
         break;
       default:
-        //this.router.navigateTo('s/dashboard');
-        //redirect to dashboard
+        //this.router.navigateTo('i/dashboard');
+        // or redirect to i/404
     }
     this.router.events.subscribe((event) => {
       if( event.state ) {

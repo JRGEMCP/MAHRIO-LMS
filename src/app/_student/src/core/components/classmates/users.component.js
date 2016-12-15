@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
-import template from './students.template.html';
+import template from './users.template.html';
 @Component({
   selector: 'students',
   template
 })
 
-export class Students {}
+export class StudentUsers {}
