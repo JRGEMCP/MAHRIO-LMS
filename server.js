@@ -7,8 +7,13 @@ var path = require('path')
 var app = express();
 app.use( express.static(root) );
 app.use( fallback('index.html', {root: root}));
-
 var port = process.env.PORT || config.PORT;
-app.listen(port, '192.168.0.2', function(){
-  console.log( 'listening on port ' + port );
-});
+if( process.argv.length == 2 ) {
+  app.listen(port, function(){
+    console.log( 'Running Production!');
+  });
+} else {
+  app.listen(port, process.argv[2], function(){
+    console.log( 'listening on ' + process.argv[2] +':' + port );
+  });
+}
