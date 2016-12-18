@@ -9,6 +9,9 @@ import template from './left.template.html';
 })
 
 export class StudentLeftNav {
+  constructor(){
+    this.isCollapsed = true;
+  }
   beforeChange($event) {
     $event.preventDefault();
   }

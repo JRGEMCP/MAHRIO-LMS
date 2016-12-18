@@ -16,7 +16,15 @@ export class StudentComponent {
   constructor(route, router){
     this.route = route;
     this.router = router;
-    this.view = route.params.value.view;
+
+
+    if( route.params.value && route.params.value.title  ) {
+      this.title = route.params.value.title;
+      this.view = 'courses';
+      this.show = true;
+    } else {
+      this.view = route.params.value.view;
+    }
   }
 
   ngOnInit(){

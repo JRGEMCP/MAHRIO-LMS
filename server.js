@@ -9,6 +9,6 @@ app.use( express.static(root) );
 app.use( fallback('index.html', {root: root}));
 
 var port = process.env.PORT || config.PORT;
-app.listen(port, function(){
+app.listen(port, '192.168.0.2', function(){
   console.log( 'listening on port ' + port );
 });

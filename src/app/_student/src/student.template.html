@@ -10,7 +10,7 @@
                         <student-dashboard></student-dashboard>
                     </div>
                     <div *ngSwitchCase="'courses'">
-                        <student-networks></student-networks>
+                        <student-networks [show]="title"></student-networks>
                     </div>
                     <div *ngSwitchCase="'classmates'">
                         <students></students>

@@ -1,4 +1,4 @@
-<div class="sidebar sidebar-250 navbar-default">
+<div class="sidebar sidebar-250 navbar-default navbar-toggleable-md" [ngbCollapse]="isCollapsed">
     <ngb-accordion [closeOthers]="true" (panelChange)="beforeChange($event)" class="accordion">
         <ngb-panel id="1" class="card-header">
             <template ngbPanelTitle>

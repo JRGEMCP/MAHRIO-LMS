@@ -68,6 +68,7 @@ import style from './top.style.scss';
 export class StudentTopNav {
   constructor(){
     this.model = '';
+    this.isCollapsed = true;
   }
   search( text$ ){
     return text$

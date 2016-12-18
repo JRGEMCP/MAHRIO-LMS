@@ -1,18 +1,27 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import template from './networks.template.html';
 
 @Component({
   selector: 'student-networks',
   template,
+  inputs: ['show']
 })
 export class StudentNetworks {
-  constructor() {
+  static get parameters(){
+    return [ActivatedRoute];
+  }
+  constructor( route ) {
     this.message = 'Courses';
     this.networks = [];
     this.currentPage = 1;
+    this.route = route;
   }
 
+  ngOnInit(){
+    console.log( this.route.params.value );
+  }
   pageChange() {
     this.networks = [];
     setTimeout(() => {

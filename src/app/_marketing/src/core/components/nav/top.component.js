@@ -12,5 +12,6 @@ import style from './top.style.scss';
 export class MarketingTopNav {
   constructor(){
     this.model = '';
+    this.isCollapsed = true;
   }
 }
