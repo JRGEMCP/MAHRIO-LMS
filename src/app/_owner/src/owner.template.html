@@ -1,7 +1,10 @@
-<owner-top-nav></owner-top-nav>
+<top-navigation (togglemenu)="toggleMenu(e);" (togglesearch)="toggleSearch(e);"
+                [toggleflag]="searchmenu" [menu]="topMenu">
+</top-navigation>
 <div class="container-fluid">
     <div class="row">
-        <owner-left-nav></owner-left-nav>
+        <aside-submenu [toggleflag]="submenu"  [menu]="asideSubMenu" (togglemenu)="toggleMenu(e);">
+        </aside-submenu>
 
         <div class="main">
             <div class="container-fluid">

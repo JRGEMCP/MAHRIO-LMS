@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { MarketingService } from './marketing.service';
 import template from './marketing.template.html';
 
 @Component({
@@ -9,11 +9,14 @@ import template from './marketing.template.html';
 
 export class MarketingComponent {
   static get parameters(){
-    return [ActivatedRoute, Router];
+    return [ActivatedRoute, Router, MarketingService];
   }
-  constructor( route, router ){
+  constructor( route, router, marketingService ){
     this.view = route.params.value.view;
     this.router = router;
+
+    this.asideSubMenu = marketingService.schema('aside-sidemenu');
+    this.topMenu = marketingService.schema('top-menu');
   }
   ngOnInit(){
     switch( this.view ) {
@@ -36,5 +39,13 @@ export class MarketingComponent {
         }
       }
     });
+  }
+  toggleMenu(){
+    this.submenu = !this.submenu;
+    this.searchmenu = false;
+  }
+  toggleSearch(){
+    this.submenu = false;
+    this.searchmenu = !this.searchmenu;
   }
 }

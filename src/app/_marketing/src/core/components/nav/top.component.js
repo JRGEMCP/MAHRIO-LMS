@@ -14,4 +14,8 @@ export class MarketingTopNav {
     this.model = '';
     this.isCollapsed = true;
   }
+
+  anyClick(){
+    this.isCollapsed = true;
+  }
 }

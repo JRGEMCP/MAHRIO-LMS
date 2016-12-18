@@ -1,0 +1,53 @@
+<div class="sidebar sidebar-250 navbar-default navbar-toggleable-md"
+     [ngClass]="{'animateMargin': toggleflag, 'hidden': hidden}">
+    <ngb-accordion [closeOthers]="true" (panelChange)="beforeChange($event); " class="accordion">
+        <ngb-panel id="{{$index + 1}}" class="card-header" *ngFor="let item of menu">
+            <template ngbPanelTitle>
+                <a [routerLink]="[item.link]" (click)="togglemenu.emit()">
+                    <i class="fa fa-20px" [ngClass]="item.icon"></i>
+                    {{item.label}}
+                </a>
+            </template>
+        </ngb-panel>
+        <ngb-panel id="5" class="card-header">
+            <template ngbPanelTitle>
+                <a [routerLink]="['/m']" (click)="togglemenu.emit()">
+                    <i class="fa fa-sign-out fa-20px"></i>
+                    Logout
+                </a>
+            </template>
+        </ngb-panel>
+        <!--<ngb-panel id="2" class="card-header">-->
+            <!--<template ngbPanelTitle>-->
+                <!--<a [routerLink]="['/s/courses']" (click)="togglemenu.emit()">-->
+                    <!--<i class="fa fa-mortar-board fa-20px"></i>-->
+                    <!--Courses-->
+                <!--</a>-->
+            <!--</template>-->
+        <!--</ngb-panel>-->
+        <!--<ngb-panel id="3" class="card-header">-->
+            <!--<template ngbPanelTitle>-->
+                <!--<a [routerLink]="['/s/classmates']" (click)="togglemenu.emit()">-->
+                    <!--<i class="fa fa-users fa-20px"></i>-->
+                    <!--Classmates-->
+                <!--</a>-->
+            <!--</template>-->
+        <!--</ngb-panel>-->
+        <!--<ngb-panel id="4" class="card-header">-->
+            <!--<template ngbPanelTitle>-->
+                <!--<a [routerLink]="['/s/chats']" (click)="togglemenu.emit()">-->
+                    <!--<i class="fa fa-comments fa-20px"></i>-->
+                    <!--Chats-->
+                <!--</a>-->
+            <!--</template>-->
+        <!--</ngb-panel>-->
+        <!--<ngb-panel id="5" class="card-header">-->
+            <!--<template ngbPanelTitle>-->
+                <!--<a [routerLink]="['/m']" (click)="togglemenu.emit()">-->
+                    <!--<i class="fa fa-sign-out fa-20px"></i>-->
+                    <!--Logout-->
+                <!--</a>-->
+            <!--</template>-->
+        <!--</ngb-panel>-->
+    </ngb-accordion>
+</div>

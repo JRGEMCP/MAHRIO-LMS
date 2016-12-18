@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { InstructorService } from './instructor.service';
 import template from './instructor.template.html';
 
 @Component({
@@ -10,13 +10,15 @@ import template from './instructor.template.html';
 
 export class InstructorComponent {
   static get parameters(){
-    return [ActivatedRoute, Router];
+    return [ActivatedRoute, Router, InstructorService];
   }
 
-  constructor(route, router){
+  constructor(route, router, instructorService){
     this.route = route;
     this.router = router;
     this.view = route.params.value.view;
+    this.asideSubMenu = instructorService.schema('aside-sidemenu');
+    this.topMenu = instructorService.schema('top-menu');
   }
 
   ngOnInit(){
@@ -40,5 +42,13 @@ export class InstructorComponent {
         }
       }
     });
+  }
+  toggleMenu(){
+    this.submenu = !this.submenu;
+    this.searchmenu = false;
+  }
+  toggleSearch(){
+    this.submenu = false;
+    this.searchmenu = !this.searchmenu;
   }
 }

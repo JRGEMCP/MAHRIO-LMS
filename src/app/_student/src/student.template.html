@@ -1,9 +1,12 @@
-<student-top-nav></student-top-nav>
+<top-navigation (togglemenu)="toggleMenu(e);" (togglesearch)="toggleSearch(e);"
+                [toggleflag]="searchmenu" [menu]="topMenu">
+</top-navigation>
 <div class="container-fluid">
     <div class="row">
-        <student-left-nav></student-left-nav>
+        <aside-submenu [toggleflag]="submenu"  [menu]="asideSubMenu" (togglemenu)="toggleMenu(e);">
+        </aside-submenu>
 
-        <div class="main">
+        <div class="main" [ngClass]="{true: 'animateLeft'}[submenu]">
             <div class="container-fluid">
                 <div [ngSwitch]="view">
                     <div *ngSwitchCase="'dashboard'">

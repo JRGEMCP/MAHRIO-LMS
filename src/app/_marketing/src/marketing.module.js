@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CoreModule } from '../../_core/src/core.module';
 
 import { MarketingComponent } from './marketing.component';
 import { SignIn } from './core/components/sign-in/sign-in.component';
@@ -14,11 +15,14 @@ import { MarketingRoutes } from './marketing.routes';
 import { MarketingTopNav } from './core/components/nav/top.component';
 import { MarketingCarousel } from './core/components/carousel/carousel.component';
 
+import { MarketingService } from './marketing.service';
+
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule.forChild( MarketingRoutes ),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    CoreModule
   ],
   declarations: [
     MarketingTopNav,
@@ -28,7 +32,10 @@ import { MarketingCarousel } from './core/components/carousel/carousel.component
     MarketingNetworks,
     MarketingChats,
     MarketingUsers,
-    MarketingComponent
+    MarketingComponent,
+  ],
+  providers: [
+    MarketingService
   ],
   bootstrap: [MarketingComponent]
 })

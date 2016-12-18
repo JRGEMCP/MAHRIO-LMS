@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CoreModule } from '../../_core/src/core.module';
 
 import { InstructorComponent } from './instructor.component';
 import { InstructorDashboard } from './core/components/dashboard/dashboard.component';
@@ -13,11 +14,14 @@ import { InstructorRoutes } from './instructor.routes';
 
 import { InstructorTopNav } from './core/components/nav/top.component';
 import { InstructorLeftNav } from './core/components/nav/left.component';
+
+import { InstructorService } from './instructor.service';
 @NgModule({
   imports: [
     BrowserModule,
     RouterModule.forChild( InstructorRoutes ),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    CoreModule
   ],
   declarations: [
     InstructorTopNav,
@@ -27,6 +31,9 @@ import { InstructorLeftNav } from './core/components/nav/left.component';
     InstructorStudents,
     InstructorChats,
     InstructorComponent,
+  ],
+  providers: [
+    InstructorService
   ],
   bootstrap: [InstructorComponent]
 })

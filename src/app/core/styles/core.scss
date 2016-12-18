@@ -5,22 +5,17 @@
 @import './colors';
 @import './component.card.style';
 
-@media only screen and (min-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 57px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-  .sidebar-250 {
-    width: 250px;
-  }
+.main {
+  margin-left: 250px;
+  padding-top: 57px;
+}
+.navbar .main {
+  padding-top: 0;
+}
+@media only screen and (max-width: 991px) {
   .main {
-    margin-left: 250px;
+    padding-top: 0;
+    margin-left: 0;
   }
   .navbar-default {
     background: $white-smoke;
@@ -85,7 +80,24 @@
     }
   }
 }
-
-.main {
-  margin-top: 57px;
+.sidebar {
+  position: fixed;
+  top: 57px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+.sidebar-250 {
+  width: 250px;
+  margin-left: -250px;
+  -webkit-transition: -webkit-transform .3s ease-in-out,margin .3s ease-in-out;
+  -moz-transition: -moz-transform .3s ease-in-out,margin .3s ease-in-out;
+  -o-transition: -o-transform .3s ease-in-out,margin .3s ease-in-out;
+  transition: transform .3s ease-in-out,margin .3s ease-in-out;
+  /deep/ .card {
+    border: none;
+  }
+}
+

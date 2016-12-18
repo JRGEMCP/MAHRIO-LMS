@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { StudentService } from './student.service';
 import template from './student.template.html';
-
 @Component({
   selector: 'student-component',
   template
@@ -10,12 +9,16 @@ import template from './student.template.html';
 
 export class StudentComponent {
   static get parameters(){
-    return [ActivatedRoute, Router];
+    return [ActivatedRoute, Router, StudentService];
   }
 
-  constructor(route, router){
+  constructor(route, router, studentService){
     this.route = route;
     this.router = router;
+    this.submenu = false;
+    console.log(studentService, 'IN HERE');
+    this.asideSubMenu = studentService.schema('aside-sidemenu');
+    this.topMenu = studentService.schema('top-menu');
 
 
     if( route.params.value && route.params.value.title  ) {
@@ -49,5 +52,13 @@ export class StudentComponent {
         }
       }
     });
+  }
+  toggleMenu(){
+    this.submenu = !this.submenu;
+    this.searchmenu = false;
+  }
+  toggleSearch(){
+    this.submenu = false;
+    this.searchmenu = !this.searchmenu;
   }
 }

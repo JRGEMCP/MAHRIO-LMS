@@ -6,17 +6,17 @@
         <a class="navbar-brand" [routerLink]="['/']">LMS</a>
         <ul class="nav navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/m/courses']">
+                <a class="nav-link" [routerLink]="['/m/courses']" (click)="anyClick()">
                     Courses
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/m/conversations']">
+                <a class="nav-link" [routerLink]="['/m/conversations']" (click)="anyClick()">
                     Conversations
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/m/comrades']">
+                <a class="nav-link" [routerLink]="['/m/comrades']" (click)="anyClick()">
                     Comrades
                 </a>
             </li>
@@ -26,7 +26,7 @@
                 <label for="exampleInputEmail2">Email</label>
                 <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
             </div>
-            <button type="submit" class="btn btn-primary">Send invitation</button>
+            <button type="submit" class="btn btn-primary" (click)="anyClick()">Send invitation</button>
         </form>
     </div>
 </nav>

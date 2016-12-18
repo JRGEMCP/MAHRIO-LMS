@@ -14,6 +14,8 @@ import { OwnerRoutes } from './owner.routes';
 
 import { OwnerTopNav } from './components/nav/top.component';
 import { OwnerLeftNav } from './components/nav/left.component';
+
+import { OwnerService } from './owner.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -29,6 +31,9 @@ import { OwnerLeftNav } from './components/nav/left.component';
     OwnerUsers,
     OwnerChats,
     OwnerComponent,
+  ],
+  providers: [
+    OwnerService
   ],
   bootstrap: [OwnerComponent]
 })

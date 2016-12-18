@@ -14,6 +14,8 @@ import { StudentRoutes } from './student.routes';
 
 import { StudentTopNav } from './core/components/nav/top.component';
 import { StudentLeftNav } from './core/components/nav/left.component';
+
+import { StudentService } from './student.service';
 @NgModule({
   imports: [
     BrowserModule,
@@ -29,6 +31,9 @@ import { StudentLeftNav } from './core/components/nav/left.component';
     StudentUsers,
     StudentChats,
     StudentComponent,
+  ],
+  providers: [
+    StudentService
   ],
   bootstrap: [StudentComponent]
 })

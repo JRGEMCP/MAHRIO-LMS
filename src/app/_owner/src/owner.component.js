@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import { OwnerService } from './owner.service';
 import template from './owner.template.html';
 
 @Component({
@@ -10,13 +10,16 @@ import template from './owner.template.html';
 
 export class OwnerComponent {
   static get parameters(){
-    return [ActivatedRoute, Router];
+    return [ActivatedRoute, Router, OwnerService];
   }
 
-  constructor(route, router){
+  constructor(route, router, ownerService){
     this.route = route;
     this.router = router;
     this.view = route.params.value.view;
+
+    this.asideSubMenu = ownerService.schema('aside-sidemenu');
+    this.topMenu = ownerService.schema('top-menu');
   }
 
   ngOnInit(){
@@ -40,5 +43,13 @@ export class OwnerComponent {
         }
       }
     });
+  }
+  toggleMenu(){
+    this.submenu = !this.submenu;
+    this.searchmenu = false;
+  }
+  toggleSearch(){
+    this.submenu = false;
+    this.searchmenu = !this.searchmenu;
   }
 }
