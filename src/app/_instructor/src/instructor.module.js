@@ -12,9 +12,6 @@ import { InstructorChats } from './core/components/chats/chats.component';
 
 import { InstructorRoutes } from './instructor.routes';
 
-import { InstructorTopNav } from './core/components/nav/top.component';
-import { InstructorLeftNav } from './core/components/nav/left.component';
-
 import { InstructorService } from './instructor.service';
 @NgModule({
   imports: [
@@ -24,8 +21,6 @@ import { InstructorService } from './instructor.service';
     CoreModule
   ],
   declarations: [
-    InstructorTopNav,
-    InstructorLeftNav,
     InstructorDashboard,
     InstructorNetworks,
     InstructorStudents,

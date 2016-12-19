@@ -4,11 +4,11 @@ import template from './checkpoints.template.html';
 import style from './checkpoints.style.scss';
 
 @Component({
-  selector: 'network-checkpoints',
+  selector: 'checkpoints',
   template,
   styles: [style],
 })
-export class NetworkCheckpoints {
+export class Checkpoints {
   constructor() {
     this.headline = 'Quizzes';
     this.subhead = 'Your recent performance';

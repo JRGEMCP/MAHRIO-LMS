@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
-import template from './network-objectives.template.html';
+import template from './objectives.template.html';
 
 @Component({
-  selector: 'network-objectives',
+  selector: 'objectives',
   template,
 })
 
-export class NetworkObjectives {
+export class Objectives {
   ngOnInit() {
     this.objectives = [{
       icon: 'fa-star',

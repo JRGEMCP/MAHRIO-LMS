@@ -12,9 +12,6 @@ import { StudentChats } from './core/components/chats/chats.component';
 
 import { StudentRoutes } from './student.routes';
 
-import { StudentTopNav } from './core/components/nav/top.component';
-import { StudentLeftNav } from './core/components/nav/left.component';
-
 import { StudentService } from './student.service';
 @NgModule({
   imports: [
@@ -24,8 +21,6 @@ import { StudentService } from './student.service';
     CoreModule,
   ],
   declarations: [
-    StudentTopNav,
-    StudentLeftNav,
     StudentDashboard,
     StudentNetworks,
     StudentUsers,

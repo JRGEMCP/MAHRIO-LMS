@@ -12,9 +12,6 @@ import { OwnerChats } from './components/support/chats.component';
 
 import { OwnerRoutes } from './owner.routes';
 
-import { OwnerTopNav } from './components/nav/top.component';
-import { OwnerLeftNav } from './components/nav/left.component';
-
 import { OwnerService } from './owner.service';
 @NgModule({
   imports: [
@@ -24,8 +21,6 @@ import { OwnerService } from './owner.service';
     CoreModule,
   ],
   declarations: [
-    OwnerTopNav,
-    OwnerLeftNav,
     OwnerDashboard,
     OwnerNetworks,
     OwnerUsers,

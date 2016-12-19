@@ -9,31 +9,12 @@ import { InstructorModule } from './_instructor/src/instructor.module';
 import { OwnerModule } from './_owner/src/owner.module';
 import 'rxjs/add/operator/map';
 
-import { CapitalizePipe } from './core/pipes/capitalize.pipe';
-import { EncodeURIPipe } from './core/pipes/encore-uri.pipe';
 
 import { AppRoutes } from './app.routes';
 
 import { MahrioApp } from './app.component';
-import { Dashboard } from './dashboard/dashboard.component';
-import { Network } from './network/network.component';
-import { NetworkRecentProgress } from './network/recent-progress/recent-progress.component';
-import { NetworkRewards } from './network/rewards/rewards.component';
-import { NetworkMembership } from './network/membership/membership.component';
-import { NetworkCheckpoints } from './network/checkpoints/checkpoints.component';
-import { NetworkObjectives } from './network/objectives/network-objectives.component';
-import { NetworkList } from './network/list/network-list.component';
-import { NetworkCard } from './network/card/network-card.component';
-import { NetworkShow } from './network/show/network-show.component';
-import { User } from './user/user.component';
 
-import { MiddleAlign } from './core/directives/middle-align/middle-align.directive';
-import { NgbdStarRating } from './core/directives/rating/rating.directive';
-
-import { TopNavigation } from './core/layout/top-navigation.component';
-import { LeftNavigation } from './core/layout/left-navigation.component';
 import { Error404 } from './error/error-404.component';
-
 
 @NgModule({
   imports: [
@@ -48,23 +29,6 @@ import { Error404 } from './error/error-404.component';
   ],
   declarations: [
     MahrioApp,
-    Dashboard,
-    Network,
-    NetworkRecentProgress,
-    NetworkRewards,
-    NetworkMembership,
-    NetworkCheckpoints,
-    NetworkObjectives,
-    NetworkList,
-    NetworkCard,
-    NetworkShow,
-    MiddleAlign,
-    NgbdStarRating,
-    CapitalizePipe,
-    EncodeURIPipe,
-    User,
-    TopNavigation,
-    LeftNavigation,
     Error404,
   ],
   bootstrap: [MahrioApp],
