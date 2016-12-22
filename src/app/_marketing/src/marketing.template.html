@@ -13,7 +13,7 @@
                     <register></register>
                 </div>
                 <div *ngSwitchCase="'courses'">
-                    <marketing-networks></marketing-networks>
+                    <marketing-networks [show]="title"></marketing-networks>
                 </div>
                 <div *ngSwitchCase="'conversations'">
                     <marketing-chats></marketing-chats>

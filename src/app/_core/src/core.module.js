@@ -16,6 +16,7 @@ import { RecentProgress } from './components/progress/progress.component';
 import { NgbdStarRating } from './components/rating/rating.component';
 import { Rewards } from './components/rewards/rewards.component';
 import { TopNavigation } from './components/top-navigation/top-navigation.component';
+import { SelectComp } from './components/select/select.component';
 
 @NgModule({
   imports: [
@@ -37,6 +38,7 @@ import { TopNavigation } from './components/top-navigation/top-navigation.compon
     NgbdStarRating,
     Checkpoints,
     Objectives,
+    SelectComp,
   ],
   exports: [
     Conversation,
@@ -52,6 +54,7 @@ import { TopNavigation } from './components/top-navigation/top-navigation.compon
     NgbdStarRating,
     Checkpoints,
     Objectives,
+    SelectComp,
   ]
 })
 

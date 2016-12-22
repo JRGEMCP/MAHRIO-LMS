@@ -4,19 +4,26 @@ import { MarketingService } from './marketing.service';
 import template from './marketing.template.html';
 
 @Component({
+  selector: 'marketing-component',
   template
 })
 
 export class MarketingComponent {
   static get parameters(){
-    return [ActivatedRoute, Router, MarketingService];
+    return [ActivatedRoute, Router,MarketingService];
   }
   constructor( route, router, marketingService ){
-    this.view = route.params.value.view;
     this.router = router;
-
     this.asideSubMenu = marketingService.schema('aside-sidemenu');
     this.topMenu = marketingService.schema('top-menu');
+
+    if( route.params.value && route.params.value.title  ) {
+      this.title = route.params.value.title;
+      this.view = 'courses';
+      this.show = true;
+    } else {
+      this.view = route.params.value.view;
+    }
   }
   ngOnInit(){
     switch( this.view ) {

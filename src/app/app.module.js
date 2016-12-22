@@ -13,7 +13,7 @@ import 'rxjs/add/operator/map';
 import { AppRoutes } from './app.routes';
 
 import { MahrioApp } from './app.component';
-
+import { AppProvider } from './app.provider';
 import { Error404 } from './error/error-404.component';
 
 @NgModule({
@@ -31,6 +31,7 @@ import { Error404 } from './error/error-404.component';
     MahrioApp,
     Error404,
   ],
+  providers: [AppProvider],
   bootstrap: [MahrioApp],
 })
 export class AppModule {

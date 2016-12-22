@@ -4,29 +4,23 @@
     </button>
     <div class="collapse bg-white navbar-toggleable-md" id="navbar-header" [ngbCollapse]="isCollapsed">
         <a class="navbar-brand" [routerLink]="['/']">LMS</a>
-        <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav float-xs-right">
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['/m/courses']" (click)="anyClick()">
                     Courses
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/m/conversations']" (click)="anyClick()">
-                    Conversations
+                <a class="nav-link" [routerLink]="['/login']" (click)="anyClick()">
+                    Login
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" [routerLink]="['/m/comrades']" (click)="anyClick()">
-                    Comrades
+                <a class="nav-link" [routerLink]="['/register']" (click)="anyClick()">
+                    Sign Up
                 </a>
             </li>
         </ul>
-        <form class="form-inline float-md-right" style="padding: 0.5em 1em;">
-            <div class="form-group">
-                <label for="exampleInputEmail2">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
-            </div>
-            <button type="submit" class="btn btn-primary" (click)="anyClick()">Send invitation</button>
-        </form>
+
     </div>
 </nav>

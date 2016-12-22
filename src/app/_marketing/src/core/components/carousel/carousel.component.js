@@ -8,5 +8,13 @@ import template from './carousel.template.html';
 })
 
 export class MarketingCarousel {
+  ngOnInit(){
+    this.tron = {
+      title: 'Knowledge is Power. Period.',
+      lead: '',
+      link: '/login',
+      linkLabel: 'Sign Up'
+    };
+  }
 
 }
