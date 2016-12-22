@@ -13,7 +13,7 @@ import { MarketingUsers } from './core/components/comrades/users.component';
 import { MarketingRoutes } from './marketing.routes';
 
 import { MarketingTopNav } from './core/components/nav/top.component';
-import { MarketingCarousel } from './core/components/carousel/carousel.component';
+import { MarketingHome } from './core/components/home/home.component';
 
 import { MarketingService } from './marketing.service';
 
@@ -26,7 +26,7 @@ import { MarketingService } from './marketing.service';
   ],
   declarations: [
     MarketingTopNav,
-    MarketingCarousel,
+    MarketingHome,
     SignIn,
     Register,
     MarketingNetworks,

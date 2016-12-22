@@ -20,8 +20,8 @@ export class MarketingNetworks {
   }
   constructor( appProv, rte ){
     this.nApi = appProv;
-    this.route = rte.params.value.title;
-    if( this.route ) {
+    this.title = rte.params.value.title;
+    if( this.title ) {
       this.show = true;
     }
   }
@@ -29,7 +29,7 @@ export class MarketingNetworks {
     this.atr = this.nApi.getAttributes();
     this.cat = this.nApi.getCategories();
     if( this.show ) {
-      this.network = this.nApi.getNetwork();
+      this.network = this.nApi.getNetwork( this.title );
     } else {
       this.networks = this.nApi.getNetworks();
     }

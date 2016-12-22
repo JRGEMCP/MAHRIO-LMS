@@ -1,5 +1,44 @@
 import { Injectable } from '@angular/core';
 
+var networks = [{
+  title: 'Angular: Modern Front-End (UI) Framework',
+  rating: 3,
+  description: 'Angular is a strong competitor for front-end development. It binds together componetization'+
+  ' ideology and modularity of the user interface.',
+  tags: ['design','front-end', 'web'],
+  instructor: 'Jesus Rocha'
+},{
+  title: 'Hybrid-Mobile Apps in Ionic',
+  rating: 2,
+  description: 'Building mobile apps had never been so fast and easy since Ionic came about.',
+  tags: ['design','front-end', 'mobile'],
+  instructor: 'Jesus Rocha'
+},{
+  title: 'Running a Server using HapiJs',
+  rating: 4,
+  description: 'The server model remains the traditional middleware software for connecting clients',
+  tags: ['server-side','back-end'],
+  instructor: 'Jesus Rocha'
+},{
+  title: 'Storing Large Data Sets with MongoDb',
+  rating: 5,
+  description: 'Using MongoDb to store and extract data. You may just discover eminent data from an analysis too.',
+  instructor: 'Jesus Rocha',
+  tags: ['database']
+},{
+  title: 'Collecting Data using Internet of Things (IoT)',
+  rating: 3,
+  description: 'Collect, Store, Compute & Execute with internet-enabled hardware',
+  instructor: 'Jesus Rocha',
+  tags: ['iot','internet-enabled']
+},{
+  title: 'How does Oauth work?',
+  rating: 3,
+  description: 'With Oauth you can connect to using identity retrieved from service providers programatically.',
+  instructor: 'Jesus Rocha',
+  tags: ['authentication','security','third-party']
+}];
+
 @Injectable()
 export class AppProvider{
   constructor(){
@@ -58,44 +97,23 @@ export class AppProvider{
       instructor: 'Jesus Rocha'
     };
   }
-  getNetworks(){
-    return [[{
-      title: 'Angular: Modern Front-End (UI) Framework',
-      rating: 3,
-      description: 'Angular is a strong competitor for front-end development. It binds together componetization'+
-        ' ideology and modularity of the user interface.',
-      tags: ['design','front-end', 'web'],
-      instructor: 'Jesus Rocha'
-    },{
-      title: 'Hybrid-Mobile Apps in Ionic',
-      rating: 2,
-      description: 'Building mobile apps had never been so fast and easy since Ionic came about.',
-      tags: ['design','front-end', 'mobile'],
-      instructor: 'Jesus Rocha'
-    },{
-      title: 'Running a Server using HapiJs',
-      rating: 4,
-      description: 'The server model remains the traditional middleware software for connecting clients',
-      tags: ['server-side','back-end'],
-      instructor: 'Jesus Rocha'
-    }],[{
-      title: 'Storing Large Data Sets with MongoDb',
-      rating: 5,
-      description: 'Using MongoDb to store and extract data. You may just discover eminent data from an analysis too.',
-      instructor: 'Jesus Rocha',
-      tags: ['database']
-    },{
-      title: 'Collecting Data using Internet of Things (IoT)',
-      rating: 3,
-      description: 'Collect, Store, Compute & Execute with internet-enabled hardware',
-      instructor: 'Jesus Rocha',
-      tags: ['iot','internet-enabled']
-    },{
-      title: 'How does Oauth work?',
-      rating: 3,
-      description: 'With Oauth you can connect to using identity retrieved from service providers programatically.',
-      instructor: 'Jesus Rocha',
-      tags: ['authentication','security','third-party']
-    }]];
+  getNetworks( key, value ){
+    switch( key ){
+      case 'featured':
+        var data = [];
+        data.push( networks.slice(0, 3) );
+        return data;
+      case 'title':
+        var data = [];
+        data.push( networks.slice( networks.indexOf(function(item){ return item.title == value;}), 1) );
+        return data;
+      default:
+        var length = networks.length, data = [];
+        var rows = (length / 3);
+        for( var i = 0; i < rows; i++){
+          data.push( networks.slice(i * 3, (i * 3) + 3) );
+        }
+        return data;
+    }
   }
 }

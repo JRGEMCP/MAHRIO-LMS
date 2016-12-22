@@ -9,4 +9,17 @@
             <a class="btn btn-primary btn-lg" [routerLink]="[tron.link]" role="button">{{tron.linkLabel  }}</a>
         </p>
     </div>
+
+    <div class="col-md-12">
+        <h2 class="text-md-center">Featured Courses</h2>
+        <cards [networks]="networks" [prefix]="prefix"></cards>
+        <div class="text-md-center">
+            <a class="btn btn-primary" [routerLink]="['/m/courses']">
+                View All Courses
+            </a>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <br/>
 </div>

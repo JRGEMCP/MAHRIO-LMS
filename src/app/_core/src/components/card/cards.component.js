@@ -7,7 +7,7 @@ import style from './cards.style.scss';
   selector: 'cards',
   template,
   styles: [style],
-  inputs: ['networks'],
+  inputs: ['networks', 'prefix'],
 })
 
 export class Cards {

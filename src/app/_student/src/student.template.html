@@ -6,7 +6,7 @@
         <aside-submenu [toggleflag]="submenu"  [menu]="asideSubMenu" (togglemenu)="toggleMenu(e);">
         </aside-submenu>
 
-        <div class="main" [ngClass]="{true: 'animateLeft'}[submenu]">
+        <div class="main padding-top-57" [ngClass]="{true: 'animateLeft'}[submenu]">
             <div class="container-fluid">
                 <div [ngSwitch]="view">
                     <div *ngSwitchCase="'dashboard'">

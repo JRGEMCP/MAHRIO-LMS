@@ -5,9 +5,12 @@
 @import './colors';
 @import './component.card.style';
 
+
+.padding-top-57 {
+  padding-top: 60px;
+}
 .main {
   margin-left: 250px;
-  padding-top: 57px;
 }
 .navbar .main {
   padding-top: 0;
