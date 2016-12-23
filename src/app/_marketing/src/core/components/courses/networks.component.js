@@ -29,7 +29,8 @@ export class MarketingNetworks {
     this.atr = this.nApi.getAttributes();
     this.cat = this.nApi.getCategories();
     if( this.show ) {
-      this.network = this.nApi.getNetwork( this.title );
+      this.network = this.nApi.getNetworks( 'title', this.title );
+      console.log( this.network );
     } else {
       this.networks = this.nApi.getNetworks();
     }

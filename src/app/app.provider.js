@@ -104,9 +104,8 @@ export class AppProvider{
         data.push( networks.slice(0, 3) );
         return data;
       case 'title':
-        var data = [];
-        data.push( networks.slice( networks.indexOf(function(item){ return item.title == value;}), 1) );
-        return data;
+        var i = networks.map(function(item){ return item.title;}).indexOf(value);
+        return networks[i];
       default:
         var length = networks.length, data = [];
         var rows = (length / 3);

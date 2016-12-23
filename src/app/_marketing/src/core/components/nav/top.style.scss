@@ -1,0 +1,24 @@
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  a.navbar-brand {
+    font-size: 21pt;
+    line-height: 57px;
+    padding: 0;
+  }
+
+  li.nav-item {
+    a {
+      padding-left: 15px;
+      padding-right: 15px;
+      &:hover {
+        background-color: #E3E3E3;
+      }
+    }
+  }
+}
+.navbar-nav .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+
