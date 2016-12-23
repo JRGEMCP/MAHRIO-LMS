@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
 
 import { AdjacentButtonInput } from './components/adjacent-button-input/adjacent-button-input.component';
 import { AsideSubmenu } from './components/aside-submenu/aside-submenu.component';
@@ -22,6 +23,7 @@ import { SelectComp } from './components/select/select.component';
   imports: [
     BrowserModule,
     RouterModule,
+    FormsModule,
     NgbModule.forRoot(),
   ],
   declarations: [
