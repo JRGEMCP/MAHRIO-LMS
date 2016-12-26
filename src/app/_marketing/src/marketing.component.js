@@ -14,8 +14,8 @@ export class MarketingComponent {
     return [ActivatedRoute, Router, MarketingService, MarketingMock];
   }
   constructor( route, router, marketingService, mock ){
-    this.lang = 'en';
-    mock.setLanguage( this.lang );
+    this.lang = 'en-US';
+    //mock.setLanguage( this.lang );
     this.mock = mock;
     this.l = {
       nav: mock.getLanguage('nav'),

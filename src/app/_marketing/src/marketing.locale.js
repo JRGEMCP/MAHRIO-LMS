@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 var m = {
-  en: {
+  'en-US': {
     home: {
       sections: [{
         type: 'jumbotron',
@@ -65,7 +65,7 @@ var m = {
       zip: 'Zip Code'
     }
   },
-  sp: {
+  'es-xl': {
     home: {
       sections: [{
         type: 'jumbotron',
@@ -134,13 +134,13 @@ var m = {
 @Injectable()
 export class MarketingMock {
   constructor(){
-    marketing = m['en'];
+    this.setLanguage( navigator.language );
   }
   setLanguage( lang ) {
-    if( lang === 'sp') {
+    if( lang === 'es-xl') {
       marketing = m[ lang ];
     } else {
-      marketing = m[ 'en' ];
+      marketing = m[ 'en-US' ];
     }
   }
   getLanguage( part ){
