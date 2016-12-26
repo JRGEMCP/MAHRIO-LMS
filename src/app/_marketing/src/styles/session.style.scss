@@ -1,0 +1,15 @@
+.container {
+  display: table;
+  vertical-align: middle;
+  height: calc(100vh - 114px);
+  width: 100%;
+  .container-body {
+    display: table-cell;
+    vertical-align: inherit;
+  }
+}
+@media screen and (min-width: 992px){
+  .container {
+    width: 50%;
+  }
+}

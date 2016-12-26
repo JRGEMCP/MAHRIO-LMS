@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { AppProvider } from '../../../../../app.provider';
+import { AppProvider } from '../../../../app.provider';
 
 import template from './networks.template.html';
 import style from './networks.style.scss';

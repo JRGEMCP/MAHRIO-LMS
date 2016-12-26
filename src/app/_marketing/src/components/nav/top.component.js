@@ -6,7 +6,8 @@ import style from './top.style.scss';
 @Component({
   selector: 'marketing-top-nav',
   template,
-  styles: [style]
+  styles: [style],
+  inputs: ['l']
 })
 
 export class MarketingTopNav {

@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="container-body">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">{{l.session.login.label}}</h2>
+            <div class="form-group">
+                <label for="inputEmail">{{l.user.email}}</label>
+                <input type="email" id="inputEmail" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="inputPassword">{{l.user.p}}</label>
+                <input type="password" id="inputPassword" class="form-control">
+            </div>
+            <div class="form-check">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input">
+                    {{l.session.rememberMe}}s
+                </label>
+            </div>
+            <a [routerLink]="['/i']" class="btn btn-lg btn-primary btn-block">{{l.session.login.label}}</a>
+            <br/>
+            <a [routerLink]="['/m/reset-password']">
+                {{l.session.resetPassword.label}}
+            </a>
+        </form>
+    </div>
+</div>

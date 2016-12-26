@@ -1,16 +1,22 @@
-<marketing-top-nav></marketing-top-nav>
+<marketing-top-nav [l]="l.nav"></marketing-top-nav>
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12">
             <div [ngSwitch]="view">
                 <div *ngSwitchCase="'null'">
-                    <marketing-home></marketing-home>
+                    <marketing-home [l]="l.home"></marketing-home>
                 </div>
                 <div *ngSwitchCase="'login'">
-                    <sign-in></sign-in>
+                    <sign-in [l]="l"></sign-in>
                 </div>
                 <div *ngSwitchCase="'register'">
-                    <register></register>
+                    <register [l]="l"></register>
+                </div>
+                <div *ngSwitchCase="'reset-password'">
+                    <reset-password [l]="l"></reset-password>
+                </div>
+                <div *ngSwitchCase="'account-activation'">
+                    <account-activation [l]="l"></account-activation>
                 </div>
                 <div *ngSwitchCase="'courses'">
                     <marketing-networks [show]="title"></marketing-networks>

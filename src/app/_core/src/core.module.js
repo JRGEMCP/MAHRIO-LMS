@@ -9,6 +9,8 @@ import { AsideSubmenu } from './components/aside-submenu/aside-submenu.component
 import { Cards } from './components/card/cards.component';
 import { Checkpoints } from './components/checkpoints/checkpoints.component';
 import { Conversation } from './components/conversation/conversation.component';
+import { Jumbotron } from './components/jumbotron/jumbotron.component';
+import { Featured } from './components/featured/featured.component';
 import { List } from './components/network/list/list.component';
 import { MiddleAlign } from './components/middle-align/middle-align.component';
 import { NetworkShow } from './components/network/show/show.component';
@@ -41,6 +43,8 @@ import { SelectComp } from './components/select/select.component';
     Checkpoints,
     Objectives,
     SelectComp,
+    Jumbotron,
+    Featured,
   ],
   exports: [
     Conversation,
@@ -57,6 +61,8 @@ import { SelectComp } from './components/select/select.component';
     Checkpoints,
     Objectives,
     SelectComp,
+    Jumbotron,
+    Featured,
   ]
 })
 

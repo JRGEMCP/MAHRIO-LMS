@@ -1,3 +1,21 @@
+@media screen and (max-width: 991px) {
+  .navbar-toggleable-md {
+    position: absolute;
+    z-index: 9;
+    background: #fff;
+    right: 0;
+    left: 0;
+    top: 57px;
+    border-bottom: 2px solid #e3e3e3;
+    clear: both;
+  }
+}
+@media screen and (min-width: 992px) {
+  .navbar-nav {
+    float: right;
+  }
+}
+
 .navbar {
   padding-top: 0;
   padding-bottom: 0;
