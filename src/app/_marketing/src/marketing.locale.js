@@ -1,79 +1,146 @@
 import { Injectable } from '@angular/core';
 
-var marketing = {
-  home: {
-    sections: [{
-      type: 'jumbotron',
-      heading: ['Knowledge is Power. Period.', 'Conocimiento es Poder. Serio.'],
-      lead: [],
-      action: {
-        label: ['Register', 'Registrate'],
-        link: '/m/register'
-      }
-    },{
-      type: 'featured',
-      heading: ['Featured Courses', 'Cursos Destacados'],
-      action: {
-        link: '/m/courses',
-        label: ['View All Courses', 'Ver Todos Los Cursos']
-      }
-    }]
-  },
-  components: {
-    nav: {
-      brand: ['Mahr.io', 'Mahr.ia'],
-      links: [{
-        label: ['Courses', 'Cursos'],
-        path: '/m/courses'
+var m = {
+  en: {
+    home: {
+      sections: [{
+        type: 'jumbotron',
+        heading: 'Knowledge is Power. Period.',
+        lead: [],
+        action: {
+          label: 'Register',
+          link: '/m/register'
+        }
       },{
-        label: ['Login', 'Iniciar Sesión'],
-        path: '/m/login'
-      },{
-        label: ['Register', 'Inscribete'],
-        path: '/m/register'
+        type: 'featured',
+        heading: 'Featured Courses',
+        action: {
+          link: '/m/courses',
+          label: 'View All Courses'
+        }
       }]
+    },
+    components: {
+      nav: {
+        brand: 'Mahr.io',
+        links: [{
+          label: 'Courses',
+          path: '/m/courses'
+        },{
+          label: 'Login',
+          path: '/m/login'
+        },{
+          label: 'Register',
+          path: '/m/register'
+        }]
+      }
+    },
+    session: {
+      register: {
+        label: 'Register'
+      },
+      login: {
+        label: 'Sign In'
+      },
+      rememberMe: 'Remember Me',
+      resetPassword: {
+        label: 'Reset password?',
+        action: 'Reset Password'
+      },
+      accountActivation: {
+        label: 'Account Activation',
+        text: 'Your account is now active. Click `Continue` to proceed to your dashboard.',
+        action: 'Continue'
+      }
+    },
+    user: {
+      u: 'Username',
+      p: 'Password',
+      email: 'Email',
+      fN: 'First Name',
+      lN: 'Last Name',
+      tel: 'Telephone',
+      dir: 'Address',
+      cty: 'City',
+      zip: 'Zip Code'
     }
   },
-  session: {
-    register: {
-      label: ['Register','Inscribete']
+  sp: {
+    home: {
+      sections: [{
+        type: 'jumbotron',
+        heading: 'Conocimiento es Poder. Serio.',
+        lead: [],
+        action: {
+          label: 'Registrate',
+          link: '/m/register'
+        }
+      },{
+        type: 'featured',
+        heading: 'Cursos Destacados',
+        action: {
+          link: '/m/courses',
+          label: 'Ver Todos Los Cursos'
+        }
+      }]
     },
-    login: {
-      label: ['Sign In','Iniciar Sesion']
+    components: {
+      nav: {
+        brand: 'Mahr.io',
+        links: [{
+          label: 'Cursos',
+          path: '/m/courses'
+        },{
+          label: 'Iniciar Sesión',
+          path: '/m/login'
+        },{
+          label: 'Inscribete',
+          path: '/m/register'
+        }]
+      }
     },
-    rememberMe: ['Remember Me', 'Recuerdame'],
-    resetPassword: {
-      label: ['Reset password?','Reset password?'],
-      action: ['Reset Password', 'Reset Password']
+    session: {
+      register: {
+        label: 'Inscribete'
+      },
+      login: {
+        label: 'Iniciar Sesion'
+      },
+      rememberMe: 'Recuerdame',
+      resetPassword: {
+        label: 'Reset password?',
+        action: 'Reset Password'
+      },
+      accountActivation: {
+        label: 'Activar Cuenta',
+        text: 'Tu cuenta ha sido activada. Oprime `Continuar` para proceder a tu dashboard',
+        action: 'Continuar'
+      }
     },
-    accountActivation: {
-      label: ['Account Activation','Activar Cuenta'],
-      text: ['Your account is now active. Click `Continue` to proceed to your dashboard.',
-        'Tu cuenta ha sido activada. Oprime `Continuar` para proceder a tu dashboard'],
-      action: ['Continue','Continuar']
+    user: {
+      u: 'Usuario',
+      p: 'Contrasena',
+      email: 'Correo Electronico',
+      fN: 'Primer Nombre',
+      lN: 'Apellido',
+      tel: 'Telefono',
+      dir: 'Direccion',
+      cty: 'Ciudad',
+      zip: 'Codigo Postal'
     }
-  },
-  user: {
-    u: ['Username','Usuario'],
-    p: ['Password','Contrasena'],
-    email: ['Email','Correo Electronico'],
-    fN: ['First Name','Primer Nombre'],
-    lN: ['Last Name', 'Apellido'],
-    tel: ['Telephone', 'Telefono'],
-    dir: ['Address', 'Direccion'],
-    cty: ['City', 'Ciudad'],
-    zip: ['Zip Code', 'Codigo Postal']
   }
-};
+}, marketing = {};
 
 @Injectable()
 export class MarketingMock {
   constructor(){
-    
+    marketing = m['en'];
   }
   setLanguage( lang ) {
-    if( lang === 'en') {
-
+    if( lang === 'sp') {
+      marketing = m[ lang ];
+    } else {
+      marketing = m[ 'en' ];
     }
   }
   getLanguage( part ){

@@ -11,10 +11,12 @@ import template from './marketing.template.html';
 
 export class MarketingComponent {
   static get parameters(){
-    return [ActivatedRoute, Router,MarketingService,MarketingMock];
+    return [ActivatedRoute, Router, MarketingService, MarketingMock];
   }
   constructor( route, router, marketingService, mock ){
-    mock.setLanguage('en');
+    this.lang = 'en';
+    mock.setLanguage( this.lang );
+    this.mock = mock;
     this.l = {
       nav: mock.getLanguage('nav'),
       session: mock.getLanguage('session'),
@@ -34,7 +36,6 @@ export class MarketingComponent {
     }
   }
   ngOnInit(){
-    console.log( 'this is l tooL', this.l );
     switch( this.view ) {
       case 'courses':
       case 'register':
@@ -57,6 +58,23 @@ export class MarketingComponent {
         }
       }
     });
+    // var lang = this.lang, l = this.l, mock = this.mock;
+    // setInterval(function(){
+    //   if( lang === 'sp') {
+    //     mock.setLanguage( 'en' );
+    //     lang = 'en';
+    //   } else {
+    //     mock.setLanguage( 'sp' );
+    //     lang = 'sp';
+    //   }
+    //
+    //   l = {
+    //     nav: mock.getLanguage('nav'),
+    //     session: mock.getLanguage('session'),
+    //     home: mock.getLanguage('home'),
+    //     user: mock.getLanguage('user')
+    //   }
+    // }, 10000);
   }
   toggleMenu(){
     this.submenu = !this.submenu;
