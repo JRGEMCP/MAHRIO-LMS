@@ -38,7 +38,8 @@ var networks = [{
   title: 'Collecting Data using Internet of Things (IoT)',
   rating: 4.6,
   img: {
-    thumb: 'http://blog.initialstate.com/wp-content/uploads/2015/07/iot-platforms.png'
+    thumb: 'http://blog.initialstate.com/wp-content/uploads/2015/07/iot-platforms.png',
+    thumbClasses: 'padding-50-100'
   },
   lead: 'Collect, Store, Compute & Execute with internet-enabled hardware',
   instructor: {

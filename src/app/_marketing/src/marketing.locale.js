@@ -7,7 +7,7 @@ var marketing = {
       heading: ['Knowledge is Power. Period.', 'Conocimiento es Poder. Serio.'],
       lead: [],
       action: {
-        label: ['Sign Up', 'Registrate'],
+        label: ['Register', 'Registrate'],
         link: '/m/register'
       }
     },{
@@ -70,6 +70,11 @@ var marketing = {
 export class MarketingMock {
   constructor(){
     
+  }
+  setLanguage( lang ) {
+    if( lang === 'en') {
+
+    }
   }
   getLanguage( part ){
     switch( part ) {
