@@ -24,9 +24,43 @@
     }
   }
 }
+.media {
+  margin: 10px 0;
+  border-top: 1px solid #e3e3e3;
+  padding-top: 10px;
+}
+
 @media (min-width: 576px) {
   .card-deck-wrapper {
     margin-right: auto;
     margin-left: auto;
+  }
+}
+@media (min-width: 576px) and (max-width: 991px) {
+  .card-columns {
+    display: none;
+  }
+}
+.media.hidden-lg-up {
+  .media-left {
+    min-width: 100px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0;
+    img {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .media-right {
+    min-width: 120px;
+    vertical-align: middle;
+    padding: 0;
+    text-align: center;
+  }
+}
+@media (max-width: 991px) {
+  .container {
+    width: auto;
   }
 }

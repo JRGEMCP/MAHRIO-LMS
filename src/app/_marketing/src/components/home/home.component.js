@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AppProvider } from '../../../../app.provider';
 import template from './home.template.html';
-
+import style from './home.style.scss';
 @Component({
   selector: 'marketing-home',
   template,
+  styles: [style],
   inputs: ['l']
 })
 
