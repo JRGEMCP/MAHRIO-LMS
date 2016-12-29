@@ -15,7 +15,22 @@
     float: right;
   }
 }
-
+.absolute-top {
+  position: absolute !important;
+  background-color: #2c343b;
+  .bg-white {
+    background: #2c343b;
+    a {
+      color: rgba(255,255,255,.7);
+      text-shadow: 3px 3px 3px #000;
+      &:hover {
+        text-shadow: none;
+        background: #2F363D;
+        color: #2c343b;
+      }
+    }
+  }
+}
 .navbar {
   padding-top: 0;
   padding-bottom: 0;

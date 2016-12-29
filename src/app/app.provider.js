@@ -160,6 +160,7 @@ var networks = [{
   lead: ''
 },{
   _id: 9,
+  title: 'HTML5',
   img: {
     thumb: 'https://www.w3.org/html/logo/downloads/HTML5_Badge_512.png',
     thumbClasses: 'padding-50-100'

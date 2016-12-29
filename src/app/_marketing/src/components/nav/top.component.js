@@ -7,7 +7,7 @@ import style from './top.style.scss';
   selector: 'marketing-top-nav',
   template,
   styles: [style],
-  inputs: ['l']
+  inputs: ['l','fixed']
 })
 
 export class MarketingTopNav {

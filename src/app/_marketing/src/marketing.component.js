@@ -31,6 +31,7 @@ export class MarketingComponent {
     if( route.params.value && route.params.value.title  ) {
       this.title = route.params.value.title;
       this.view = 'courses';
+      this.fixed = true;
     } else {
       this.view = route.params.value.view;
     }

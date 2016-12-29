@@ -1,52 +1,13 @@
 <div *ngIf="!show">
-    <div class="row">
-        <div class="col-md-3">
-            <div class="pull-right chip">
-                <select-comp [label]="cat.label" [options]="cat.options" [sclass]="'text-md-right'"></select-comp>
-            </div>
-        </div>
-        <div class="col-md-3">
-            <div class="pull-left chip">
-                <select-comp [label]="atr.label" [options]="atr.options"></select-comp>
-            </div>
-        </div>
-
-
-        <div class="col-md-6 pull-right">
-            <div class="input-group">
-                <input type="text" class="form-control" placeholder="Find a course">
-                <span class="input-group-btn">
-                <button class="btn btn-primary" type="button">
-                    <i class="fa fa-search"></i>
-                </button>
-            </span>
-            </div>
-        </div>
-    </div>
+    <cards-header [l]="l"></cards-header>
     <br/>
     <cards [networks]="networks"></cards>
 </div>
 <div *ngIf="show">
     <div class="row">
-        <div class="jumbotron text-md-center">
-            <h1 class="display-3">{{network.title}}</h1>
-            <div class="col-md-6 text-md-right" style="border-right: 1px solid #CACACA;">
-                {{network.instructor}}
-            </div>
-            <div class="col-md-6 text-md-left" style="border-left: 1px solid #CACACA;">
-                <ngbd-star-rating></ngbd-star-rating>
-            </div>
-
-            <hr class="my-2">
-            <p class="lead">{{network.description}}</p>
-
-
-            <p class="lead">
-                <a class="btn btn-primary btn-lg" [routerLink]="['/m/register']" role="button">Enroll Now</a>
-            </p>
-        </div>
+        <hero [l]="network"></hero>
     </div>
-    <p>
+    <p class="ng-hide">
         http://learn.cofounderslab.com/p/building-a-rockstar-team
     </p>
 

@@ -26,13 +26,16 @@ export class MarketingNetworks {
     }
   }
   ngOnInit(){
-    this.atr = this.nApi.getAttributes();
-    this.cat = this.nApi.getCategories();
+    this.l = {
+      atr: this.nApi.getAttributes(),
+      cat: this.nApi.getCategories()
+    };
     if( this.show ) {
       this.network = this.nApi.getNetworks( 'title', this.title );
       console.log( this.network );
     } else {
       this.networks = this.nApi.getNetworks();
     }
+    window.scrollTo(0,0);
   }
 }

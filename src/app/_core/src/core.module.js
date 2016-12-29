@@ -6,9 +6,11 @@ import { FormsModule } from '@angular/forms';
 
 import { AdjacentButtonInput } from './components/adjacent-button-input/adjacent-button-input.component';
 import { AsideSubmenu } from './components/aside-submenu/aside-submenu.component';
+import { CardsHeader } from './components/card/header.component';
 import { Cards } from './components/card/cards.component';
 import { Checkpoints } from './components/checkpoints/checkpoints.component';
 import { Conversation } from './components/conversation/conversation.component';
+import { Hero } from './components/hero/hero.component';
 import { Jumbotron } from './components/jumbotron/jumbotron.component';
 import { Featured } from './components/featured/featured.component';
 import { List } from './components/network/list/list.component';
@@ -30,6 +32,7 @@ import { SelectComp } from './components/select/select.component';
   ],
   declarations: [
     Conversation,
+    CardsHeader,
     Cards,
     List,
     RecentProgress,
@@ -43,11 +46,13 @@ import { SelectComp } from './components/select/select.component';
     Checkpoints,
     Objectives,
     SelectComp,
+    Hero,
     Jumbotron,
     Featured,
   ],
   exports: [
     Conversation,
+    CardsHeader,
     Cards,
     List,
     RecentProgress,
@@ -61,6 +66,7 @@ import { SelectComp } from './components/select/select.component';
     Checkpoints,
     Objectives,
     SelectComp,
+    Hero,
     Jumbotron,
     Featured,
   ]
