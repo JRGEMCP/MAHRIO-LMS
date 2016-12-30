@@ -10,7 +10,7 @@
                     <sign-in [l]="l"></sign-in>
                 </div>
                 <div *ngSwitchCase="'register'">
-                    <register [l]="l"></register>
+                    <register [l]="l" [network]="id"></register>
                 </div>
                 <div *ngSwitchCase="'reset-password'">
                     <reset-password [l]="l"></reset-password>

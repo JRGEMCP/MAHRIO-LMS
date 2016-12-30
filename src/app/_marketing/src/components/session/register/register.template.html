@@ -1,4 +1,14 @@
-<div class="container">
+<div class="container-body text-xs-center hidden-lg-up" *ngIf="hasNetwork">
+    <img src="{{network.img.thumb}}" style="max-width: 200px"/>
+    <h3>{{network.title}}</h3>
+    <h4>{{network.cost}}</h4>
+</div>
+<div class="container" [ngClass]="{'autoHeight':hasNetwork}">
+    <div class="container-body text-xs-center hidden-md-down" *ngIf="hasNetwork">
+        <img src="{{network.img.thumb}}" class="img-fluid"/>
+        <h3>{{network.title}}</h3>
+        <h4>{{network.cost}}</h4>
+    </div>
     <div class="container-body">
         <form class="form-signin">
             <h2 class="form-signin-heading">{{l.session.register.label}}</h2>

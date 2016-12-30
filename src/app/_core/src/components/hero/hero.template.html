@@ -9,12 +9,12 @@
                     <p>
                         {{l.lead}}
                     </p>
-                    <a [routerLink]="['/m/register']" class="btn btn-primary btn-lg">
+                    <a [routerLink]="['/m/register/'+l._id]" class="btn btn-primary btn-lg">
                         Enroll Now
                     </a>
                 </div>
             </div>
-            <div class="cd-half-width">
+            <div class="cd-half-width hidden-md-down">
                 <div class="col-data">
                     <img src="{{l.img.thumb}}" class="img-fluid">
                 </div>
@@ -22,3 +22,4 @@
         </li>
     </ul>
 </section>
+

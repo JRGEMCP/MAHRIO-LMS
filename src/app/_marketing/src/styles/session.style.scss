@@ -6,10 +6,17 @@
   .container-body {
     display: table-cell;
     vertical-align: inherit;
+    padding: 10px;
+    max-width: 200px;
   }
 }
 @media screen and (min-width: 992px){
   .container {
-    width: 50%;
+    width: 70%;
+  }
+}
+@media (max-width: 991px){
+  .autoHeight {
+    height: auto;
   }
 }

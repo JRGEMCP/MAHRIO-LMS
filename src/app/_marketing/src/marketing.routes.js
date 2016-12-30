@@ -10,6 +10,10 @@ export const MarketingRoutes = [
     component: MarketingComponent
   },
   {
+    path: 'm/register/:id',
+    component: MarketingComponent
+  },
+  {
     path: 'm/:view',
     component: MarketingComponent
   },

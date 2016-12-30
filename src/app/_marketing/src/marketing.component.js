@@ -28,7 +28,10 @@ export class MarketingComponent {
     this.asideSubMenu = marketingService.schema('aside-sidemenu');
     this.topMenu = marketingService.schema('top-menu');
 
-    if( route.params.value && route.params.value.title  ) {
+    if( route.params.value && route.params.value.id ) {
+      this.view = 'register';
+      this.id = route.params.value.id;
+    } else if( route.params.value && route.params.value.title  ) {
       this.title = route.params.value.title;
       this.view = 'courses';
       this.fixed = true;
