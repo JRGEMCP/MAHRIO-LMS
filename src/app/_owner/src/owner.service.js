@@ -25,7 +25,8 @@ export class OwnerService{
         break;
       case 'top-menu':
         return {
-          brand: 'Owner'
+          brand: 'Owner',
+          link: '/o'
         };
     }
   }

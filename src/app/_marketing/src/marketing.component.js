@@ -80,12 +80,10 @@ export class MarketingComponent {
     //   }
     // }, 10000);
   }
-  toggleMenu(){
-    this.submenu = !this.submenu;
-    this.searchmenu = false;
+  toggleMenu( ){
+    this.menu = !this.menu;
   }
   toggleSearch(){
-    this.submenu = false;
-    this.searchmenu = !this.searchmenu;
+
   }
 }

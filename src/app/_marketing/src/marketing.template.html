@@ -1,5 +1,5 @@
-<marketing-top-nav [l]="l.nav" [fixed]="fixed"></marketing-top-nav>
-<div class="container-fluid">
+<marketing-top-nav [l]="l.nav" [fixed]="fixed" (togglemenu)="toggleMenu()"></marketing-top-nav>
+<div class="container-fluid" [ngClass]="{'dropdown-backdrop': menu}">
     <div class="row">
         <div class="col-xs-12">
             <div [ngSwitch]="view">

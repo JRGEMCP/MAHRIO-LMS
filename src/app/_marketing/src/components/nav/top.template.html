@@ -2,12 +2,12 @@
     [ngClass]="{true: 'absolute-top navbar-fixed-top '}[fixed]">
     <button class="navbar-toggler hidden-lg-up pull-left" type="button" aria-controls="navbar-header" aria-label="Toggle navigation"
             style="margin-top: 8px;vertical-align: middle;margin-right: 10px;"
-            (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed">
+            (click)="isCollapsed = !isCollapsed; togglemenu.emit(isCollapsed);" [attr.aria-expanded]="!isCollapsed">
     </button>
     <a class="navbar-brand hidden-lg-up" [routerLink]="['/']">
         {{l.brand}}
     </a>
-    <div class="collapse bg-white navbar-toggleable-md" style="clear: both" id="navbar-header" [ngbCollapse]="isCollapsed">
+    <div class="collapse bg-white navbar-toggleable-md" [ngClass]="{'full-menu': !isCollapsed}" style="clear: both" id="navbar-header" [ngbCollapse]="isCollapsed">
 
         <h1 style="margin: 0">
             <a class="navbar-brand hidden-md-down" [routerLink]="['/']">

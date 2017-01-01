@@ -65,7 +65,7 @@ var m = {
       zip: 'Zip Code'
     }
   },
-  'es-xl': {
+  'es': {
     home: {
       sections: [{
         type: 'jumbotron',
@@ -134,10 +134,11 @@ var m = {
 @Injectable()
 export class MarketingMock {
   constructor(){
-    this.setLanguage( navigator.language );
+    var lang = navigator.language.split('-');
+    this.setLanguage( lang[0] );
   }
   setLanguage( lang ) {
-    if( lang === 'es-xl') {
+    if( lang === 'es') {
       marketing = m[ lang ];
     } else {
       marketing = m[ 'en-US' ];

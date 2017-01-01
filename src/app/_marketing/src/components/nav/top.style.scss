@@ -9,6 +9,13 @@
     border-bottom: 2px solid #e3e3e3;
     clear: both;
   }
+  .navbar.container {
+    width: 100%;
+  }
+  .full-menu {
+    height: calc(100vh - 57px);
+    overflow: scroll;
+  }
 }
 @media screen and (min-width: 992px) {
   .navbar-nav {
@@ -32,6 +39,7 @@
   }
 }
 .navbar {
+  z-index: 999;
   padding-top: 0;
   padding-bottom: 0;
   a.navbar-brand {
