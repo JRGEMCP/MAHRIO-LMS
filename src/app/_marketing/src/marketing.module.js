@@ -15,6 +15,7 @@ import { MarketingUsers } from './components/comrades/users.component';
 import { MarketingRoutes } from './marketing.routes';
 
 import { MarketingTopNav } from './components/nav/top.component';
+import { MarketingFooter } from './components/footer/footer.component';
 import { MarketingHome } from './components/home/home.component';
 
 import { MarketingService } from './marketing.service';
@@ -28,6 +29,7 @@ import { MarketingService } from './marketing.service';
   ],
   declarations: [
     MarketingTopNav,
+    MarketingFooter,
     MarketingHome,
     SignIn,
     Register,

@@ -1,4 +1,4 @@
-<div class="card-columns">
+<div class="card-columns mb-3">
     <div *ngFor="let network of networks" class="card" [routerLink]="['/m/courses/'+network.title]">
         <div class="text-xs-center" *ngIf="network.img"
              [ngClass]="network.img.thumbClasses">
