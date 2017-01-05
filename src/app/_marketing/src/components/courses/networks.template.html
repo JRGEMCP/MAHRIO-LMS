@@ -1,0 +1,15 @@
+<div *ngIf="!show">
+    <cards-header [l]="l"></cards-header>
+    <br/>
+    <cards [networks]="networks"></cards>
+</div>
+<div *ngIf="show">
+    <div class="row">
+        <hero [l]="network"></hero>
+    </div>
+    <p class="ng-hide">
+        http://learn.cofounderslab.com/p/building-a-rockstar-team
+    </p>
+
+
+</div>

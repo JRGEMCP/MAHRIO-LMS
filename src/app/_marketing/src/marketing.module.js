@@ -3,17 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CoreModule } from '../../_core/src/core.module';
-
+import { MarketingMock } from './marketing.locale';
 import { MarketingComponent } from './marketing.component';
-import { SignIn } from './core/components/sign-in/sign-in.component';
-import { Register } from './core/components/register/register.component';
-import { MarketingNetworks } from './core/components/courses/networks.component';
-import { MarketingChats } from './core/components/conversations/chats.component';
-import { MarketingUsers } from './core/components/comrades/users.component';
+import { SignIn } from './components/session/sign-in/sign-in.component';
+import { Register } from './components/session/register/register.component';
+import { ResetPassword } from './components/session/reset-password/reset-password.component';
+import { AccountActivation } from './components/session/account-activation/account-activation.component';
+import { MarketingNetworks } from './components/courses/networks.component';
+import { MarketingChats } from './components/conversations/chats.component';
+import { MarketingUsers } from './components/comrades/users.component';
 import { MarketingRoutes } from './marketing.routes';
 
-import { MarketingTopNav } from './core/components/nav/top.component';
-import { MarketingHome } from './core/components/home/home.component';
+import { MarketingTopNav } from './components/nav/top.component';
+import { MarketingFooter } from './components/footer/footer.component';
+import { MarketingHome } from './components/home/home.component';
 
 import { MarketingService } from './marketing.service';
 
@@ -26,15 +29,19 @@ import { MarketingService } from './marketing.service';
   ],
   declarations: [
     MarketingTopNav,
+    MarketingFooter,
     MarketingHome,
     SignIn,
     Register,
+    ResetPassword,
+    AccountActivation,
     MarketingNetworks,
     MarketingChats,
     MarketingUsers,
     MarketingComponent,
   ],
   providers: [
+    MarketingMock,
     MarketingService
   ],
   bootstrap: [MarketingComponent]

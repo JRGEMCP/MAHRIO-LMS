@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { AppProvider } from '../../../../../app.provider';
+import { AppProvider } from '../../../../app.provider';
 import template from './home.template.html';
-
+import style from './home.style.scss';
 @Component({
   selector: 'marketing-home',
-  template
+  template,
+  styles: [style],
+  inputs: ['l']
 })
 
 export class MarketingHome {
@@ -15,15 +17,8 @@ export class MarketingHome {
     this.nApi = appProv;
   }
   ngOnInit(){
-    this.tron = {
-      title: 'Knowledge is Power. Period.',
-      lead: '',
-      link: '/register',
-      linkLabel: 'Sign Up'
-    };
     this.prefix = '/m/courses/';
-    this.networks = this.nApi.getNetworks('featured');
-    console.log( this.networks );
+    this.networks = this.nApi.getNetworks().slice(0,6);
+    this.sections = this.l.sections;
   }
-
 }

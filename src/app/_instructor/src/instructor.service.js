@@ -24,7 +24,8 @@ export class InstructorService{
         }];
       case 'top-menu':
         return {
-          brand: 'Instructor'
+          brand: 'Instructor',
+          link: '/i'
         };
       default:
     }

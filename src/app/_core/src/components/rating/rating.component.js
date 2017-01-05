@@ -21,7 +21,7 @@ import template from './rating.template.html';
       color: rgb(247,167,56);
     }
   `],
+  inputs: ['rating']
 })
 export class NgbdStarRating {
-  currentRate = 3.14;
 }

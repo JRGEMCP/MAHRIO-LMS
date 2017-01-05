@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MarketingService } from './marketing.service';
+import { MarketingMock } from './marketing.locale';
 import template from './marketing.template.html';
 
 @Component({
@@ -10,17 +11,30 @@ import template from './marketing.template.html';
 
 export class MarketingComponent {
   static get parameters(){
-    return [ActivatedRoute, Router,MarketingService];
+    return [ActivatedRoute, Router, MarketingService, MarketingMock];
   }
-  constructor( route, router, marketingService ){
+  constructor( route, router, marketingService, mock ){
+    this.lang = 'en-US';
+    //mock.setLanguage( this.lang );
+    this.mock = mock;
+    this.l = {
+      nav: mock.getLanguage('nav'),
+      session: mock.getLanguage('session'),
+      home: mock.getLanguage('home'),
+      user: mock.getLanguage('user')
+    };
+
     this.router = router;
     this.asideSubMenu = marketingService.schema('aside-sidemenu');
     this.topMenu = marketingService.schema('top-menu');
 
-    if( route.params.value && route.params.value.title  ) {
+    if( route.params.value && route.params.value.id ) {
+      this.view = 'register';
+      this.id = route.params.value.id;
+    } else if( route.params.value && route.params.value.title  ) {
       this.title = route.params.value.title;
       this.view = 'courses';
-      this.show = true;
+      this.fixed = true;
     } else {
       this.view = route.params.value.view;
     }
@@ -32,6 +46,8 @@ export class MarketingComponent {
       case 'login':
       case 'conversations':
       case 'comrades':
+      case 'reset-password':
+      case 'account-activation':
         break;
       default:
         this.view = 'null';
@@ -46,13 +62,28 @@ export class MarketingComponent {
         }
       }
     });
+    // var lang = this.lang, l = this.l, mock = this.mock;
+    // setInterval(function(){
+    //   if( lang === 'sp') {
+    //     mock.setLanguage( 'en' );
+    //     lang = 'en';
+    //   } else {
+    //     mock.setLanguage( 'sp' );
+    //     lang = 'sp';
+    //   }
+    //
+    //   l = {
+    //     nav: mock.getLanguage('nav'),
+    //     session: mock.getLanguage('session'),
+    //     home: mock.getLanguage('home'),
+    //     user: mock.getLanguage('user')
+    //   }
+    // }, 10000);
   }
-  toggleMenu(){
-    this.submenu = !this.submenu;
-    this.searchmenu = false;
+  toggleMenu( ){
+    this.menu = !this.menu;
   }
   toggleSearch(){
-    this.submenu = false;
-    this.searchmenu = !this.searchmenu;
+
   }
 }

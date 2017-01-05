@@ -24,7 +24,8 @@ export class StudentService{
         }];
       case 'top-menu':
         return {
-          brand: 'Students'
+          brand: 'Students',
+          link: '/s'
         };
       default:
     }

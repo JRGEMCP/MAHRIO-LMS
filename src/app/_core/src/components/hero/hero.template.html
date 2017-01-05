@@ -1,0 +1,25 @@
+<section class="cd-hero" style="padding:0">
+    <ul class="cd-hero-slider" style="padding: 0;">
+        <li style="background-size: cover;" class="selected">
+            <div class="cd-half-width">
+                <div class="col-data">
+                    <h2 style="max-width: 100%;">
+                        {{l.title}}
+                    </h2>
+                    <p>
+                        {{l.lead}}
+                    </p>
+                    <a [routerLink]="['/m/register/'+l._id]" class="btn btn-primary btn-lg">
+                        Enroll Now
+                    </a>
+                </div>
+            </div>
+            <div class="cd-half-width hidden-md-down">
+                <div class="col-data">
+                    <img src="{{l.img.thumb}}" class="img-fluid">
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
