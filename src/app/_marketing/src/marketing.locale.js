@@ -72,7 +72,7 @@ var m = {
         heading: 'Conocimiento es Poder. Serio.',
         lead: [],
         action: {
-          label: 'Registrate',
+          label: 'Inscribirse',
           link: '/m/register'
         }
       },{
@@ -108,8 +108,8 @@ var m = {
       },
       rememberMe: 'Recuerdame',
       resetPassword: {
-        label: 'Reset password?',
-        action: 'Reset Password'
+        label: 'Olvido Contrasena?',
+        action: 'Restablecer Contrasena'
       },
       accountActivation: {
         label: 'Activar Cuenta',
