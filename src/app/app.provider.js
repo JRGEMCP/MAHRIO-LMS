@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 var networks = [{
   _id: 0,
-  title: 'Angular: Modern Front-End (UI) Framework',
+  title: 'Angular: Modern Front-End Framework',
   length: '3 Weeks', cost: '$19', rating: 4.5, tags: ['design','front-end', 'web'],
   img: {
     thumb: 'http://codecondo.com/wp-content/uploads/2015/05/15-Directives-to-Extend-Your-Angular.js-Apps.jpg',
@@ -33,7 +33,7 @@ var networks = [{
   }
 },{
   _id: 2,
-  title: 'Collecting Data using Internet of Things (IoT)',
+  title: 'Collecting Data using Internet of Things',
   length: '3 Weeks', cost: '$19', rating: 4.6, tags: ['iot','internet-enabled'],
   img: {
     thumb: 'http://blog.initialstate.com/wp-content/uploads/2015/07/iot-platforms.png',

@@ -10,6 +10,6 @@ import style from './jumbotron.style.scss';
 })
 export class Jumbotron {
   ngOnInit(){
-    console.log( this.l );
+
   }
 }
