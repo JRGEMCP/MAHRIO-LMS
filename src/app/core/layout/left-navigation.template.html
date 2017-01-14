@@ -1,6 +1,6 @@
 <div class="sidebar sidebar-250 navbar-default">
     <ngb-accordion [closeOthers]="true" (panelChange)="beforeChange($event)" class="accordion">
-        <ngb-panel id="1" class="card-header">
+        <ngb-panel id="1-dashboard" class="card-header">
             <template ngbPanelTitle>
                 <a [routerLink]="['/dashboard']">
                     <i class="fa fa-bar-chart fa-20px"></i>
@@ -8,7 +8,7 @@
                 </a>
             </template>
         </ngb-panel>
-        <ngb-panel id="2" class="card-header">
+        <ngb-panel id="2-courses" class="card-header">
             <template ngbPanelTitle>
                 <a>
                     <i class="fa fa-plus pull-right inactive"></i>
@@ -25,7 +25,7 @@
                 </ul>
             </template>
         </ngb-panel>
-        <ngb-panel id="3" class="card-header">
+        <ngb-panel id="3-users" class="card-header">
             <template ngbPanelTitle>
                 <a>
                     <i class="fa fa-plus pull-right inactive"></i>
@@ -42,7 +42,7 @@
                 </ul>
             </template>
         </ngb-panel>
-        <ngb-panel id="4" class="card-header">
+        <ngb-panel id="4-conversations" class="card-header">
             <template ngbPanelTitle>
                 <a>
                     <i class="fa fa-plus pull-right inactive"></i>
@@ -59,7 +59,7 @@
                 </ul>
             </template>
         </ngb-panel>
-        <ngb-panel id="5" class="card-header">
+        <ngb-panel id="5-logout" class="card-header">
             <template ngbPanelTitle>
                 <a>
                     <i class="fa fa-sign-out fa-20px"></i>
