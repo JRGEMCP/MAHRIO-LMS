@@ -40,21 +40,23 @@ npm run coverage
 
 ### E2E Tests:
 
-[Prerequisite:] Protractor
+Step 1 - [Prerequisite:] Protractor
 
 ```
 npm install -g protractor
 ```
 
-Selenium
+Step 2 - Selenium
 
 ```
 ./node_modules/protractor/bin/webdriver-manager update
 ```
 
+Step 3 - Install latest Java SE Development Kit
+
 [Java](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
-Run E2E Tests:
+Step 4 - Run E2E Tests:
 
 ```
 protractor
