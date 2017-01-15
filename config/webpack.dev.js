@@ -9,7 +9,8 @@ module.exports = webpackMerge( commonConfig, {
   devtool: 'inline-source-map',
 
   output: {
-    path: helpers.root('public'),
+    path: helpers.root('public/assets/'),
+    publicPath: './assets/',
     filename: '[name].js'
   },
   plugins: [
