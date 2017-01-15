@@ -56,11 +56,15 @@ module.exports = {
     new HTMLPlugin({
       template: 'src/index.html',
       filename: '../index.html',
-      chunksSortMode: 'dependency'
+      chunksSortMode: 'dependency',
+      inject: false
     }),
     new CopyWebpackPlugin([{
       from: 'src/assets/img',
       to: 'img'
+    },{
+      from: 'src/google0662acee6666f6d8.html',
+      to: '../'
     }]),
     new webpack.ResolverPlugin(
       new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('.bower.json', ['main'])
