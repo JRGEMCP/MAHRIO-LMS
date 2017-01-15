@@ -4,6 +4,7 @@ switch( process.env.NODE_ENV ) {
   case 'PRODUCTION':
   case 'production':
     module.exports = require('./config/webpack.prod');
+    break;
   default:
     module.exports = require('./config/webpack.dev');
 }
