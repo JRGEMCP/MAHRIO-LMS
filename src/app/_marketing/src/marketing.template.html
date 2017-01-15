@@ -19,9 +19,7 @@
                     <account-activation [l]="l"></account-activation>
                 </div>
                 <div *ngSwitchCase="'courses'">
-                    <div class="container" *ngIf="!title">
-                        <marketing-networks [show]="0"></marketing-networks>
-                    </div>
+                    <marketing-networks [show]="0" *ngIf="!title"></marketing-networks>
                     <marketing-networks [show]="title" *ngIf="title"></marketing-networks>
                 </div>
                 <div *ngSwitchCase="'conversations'">

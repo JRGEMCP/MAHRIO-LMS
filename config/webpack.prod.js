@@ -16,7 +16,7 @@ module.exports = webpackMerge( commonConfig, {
   plugins: [
     new ExtractTextPlugin('[name].css'),
     new webpack.DefinePlugin({
-      WPCONFIG: JSON.stringify( conf.DEV )
+      WPCONFIG: JSON.stringify( conf.PROD )
     })
   ],
   devServer: {

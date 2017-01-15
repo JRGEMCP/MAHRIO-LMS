@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, enableProdMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
@@ -15,6 +15,11 @@ import { AppRoutes } from './app.routes';
 import { MahrioApp } from './app.component';
 import { AppProvider } from './app.provider';
 import { Error404 } from './error/error-404.component';
+
+
+if( 'PROD' === WPCONFIG.ENV ) {
+  enableProdMode();
+}
 
 @NgModule({
   imports: [

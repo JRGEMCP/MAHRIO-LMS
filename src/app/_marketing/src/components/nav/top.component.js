@@ -20,5 +20,6 @@ export class MarketingTopNav {
 
   anyClick(){
     this.isCollapsed = true;
+    this.togglemenu.emit(this.isCollapsed);
   }
 }

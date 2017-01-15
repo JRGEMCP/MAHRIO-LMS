@@ -62,23 +62,6 @@ export class MarketingComponent {
         }
       }
     });
-    // var lang = this.lang, l = this.l, mock = this.mock;
-    // setInterval(function(){
-    //   if( lang === 'sp') {
-    //     mock.setLanguage( 'en' );
-    //     lang = 'en';
-    //   } else {
-    //     mock.setLanguage( 'sp' );
-    //     lang = 'sp';
-    //   }
-    //
-    //   l = {
-    //     nav: mock.getLanguage('nav'),
-    //     session: mock.getLanguage('session'),
-    //     home: mock.getLanguage('home'),
-    //     user: mock.getLanguage('user')
-    //   }
-    // }, 10000);
   }
   toggleMenu( ){
     this.menu = !this.menu;

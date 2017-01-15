@@ -9,6 +9,6 @@ import template from './featured.template.html';
 
 export class Featured {
   ngOnInit(){
-    console.log( 'featured', this.l );
+
   }
 }

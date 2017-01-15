@@ -1,7 +1,9 @@
 {
   "PORT": 8000,
   "DEV": {
-    "ENV": "DEV",
-    "PATHS": {}
+    "ENV": "DEV"
+  },
+  "PROD": {
+    "ENV": "PROD"
   }
 }

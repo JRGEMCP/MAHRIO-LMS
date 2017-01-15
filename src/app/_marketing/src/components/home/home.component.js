@@ -18,7 +18,12 @@ export class MarketingHome {
   }
   ngOnInit(){
     this.prefix = '/m/courses/';
-    this.networks = this.nApi.getNetworks().slice(0,6);
+    var featured = [0,3,4,5,6,7];
+    this.networks = this.nApi.getNetworks().filter(
+      function(item){
+        return featured.indexOf(item._id) !== -1;
+      }
+    );
     this.sections = this.l.sections;
   }
 }
