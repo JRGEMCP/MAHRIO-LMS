@@ -1,0 +1,36 @@
+<div *ngFor="let deck of networks">
+    <template ngFor let-item="$implicit" [ngForOf]="deck" let-i="index">
+        <div class="card" style="padding-bottom: 0;">
+            <div class="media">
+                <div class="media-left bg-white-snow v-align-middle">
+                    <div class="cover overlay cover-image-full hover" style="height: 150px; width: 150px;">
+                        <span class="img icon-block height-150 ">
+                            <span style="line-height: 140px;">
+                                <i class="fa fa-image"></i>
+                            </span>
+                        </span>
+                    </div>
+                </div>
+                <div class="media-body">
+                    <div class="card-block">
+                        <h4 class="card-title">{{item.title}}</h4>
+                        <p class="card-text">{{item.description}}</p>
+                    </div>
+
+                </div>
+                <div class="media-right bg-white-snow v-align-middle">
+                    <ngbd-star-rating></ngbd-star-rating>
+                    <div class="card-instructor">
+                        <div style="max-height: 90px; line-height: 50px;">
+                            <i class="fa fa-user fa-3x" style=" width: 50px;margin-right: 10px;text-align: center;"></i>
+                        </div>
+                        <div class="main">
+                            <h6>{{item.instructor}}</h6>
+                            Instructor
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</div>

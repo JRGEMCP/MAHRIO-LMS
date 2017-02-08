@@ -1,0 +1,30 @@
+<top-navigation (togglemenu)="toggleMenu(e);" (togglesearch)="toggleSearch(e);"
+                [toggleflag]="searchmenu" [menu]="topMenu">
+</top-navigation>
+<div class="container-fluid">
+    <div class="row">
+        <aside-submenu [toggleflag]="submenu"  [menu]="asideSubMenu" (togglemenu)="toggleMenu(e);">
+        </aside-submenu>
+
+        <div class="main padding-top-57" [ngClass]="{true: 'animateLeft'}[submenu]">
+            <div class="container-fluid">
+                <div [ngSwitch]="view">
+                    <div *ngSwitchCase="'dashboard'">
+                        <student-dashboard></student-dashboard>
+                    </div>
+                    <div *ngSwitchCase="'courses'">
+                        <student-networks [show]="title"></student-networks>
+                    </div>
+                    <div *ngSwitchCase="'classmates'">
+                        <students></students>
+                    </div>
+                    <div *ngSwitchCase="'chats'">
+                        <student-chats></student-chats>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

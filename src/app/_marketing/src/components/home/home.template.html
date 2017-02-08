@@ -1,0 +1,12 @@
+<div class="row" *ngFor="let section of sections">
+    <div [ngSwitch]="section.type">
+        <div *ngSwitchCase="'jumbotron'">
+            <jumbotron [l]="section"></jumbotron>
+        </div>
+        <div *ngSwitchCase="'featured'" class="col-md-12">
+            <div class="container" class="mb-3">
+                <featured [data]="networks" [prefix]="prefix" [l]="section"></featured>
+            </div>
+        </div>
+    </div>
+</div>

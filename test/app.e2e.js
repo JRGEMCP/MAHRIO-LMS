@@ -8,8 +8,6 @@ describe('app', () => {
   });
 
   it('should not be logged in', () => {
-    const logoutHeader = element(by.id('5-logout-header'));
-    console.log(logoutHeader.getId());
-    expect(logoutHeader.isDisplayed()).toBe(false);
+    expect(element(by.id('5-logout-header')).isPresent()).toEqual(false);
   });
 });

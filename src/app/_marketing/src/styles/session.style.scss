@@ -1,0 +1,23 @@
+.container {
+  display: table;
+  vertical-align: middle;
+  height: calc(100vh - 114px);
+  width: 100%;
+  padding: 0;
+  .container-body {
+    display: table-cell;
+    vertical-align: inherit;
+    padding: 10px;
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 992px){
+  .container {
+    width: 70%;
+  }
+}
+@media (max-width: 991px){
+  .autoHeight {
+    height: auto;
+  }
+}

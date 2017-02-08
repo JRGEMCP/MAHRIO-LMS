@@ -1,0 +1,30 @@
+<top-navigation (togglemenu)="toggleMenu(e);" (togglesearch)="toggleSearch(e);"
+                [toggleflag]="searchmenu" [menu]="topMenu">
+</top-navigation>
+<div class="container-fluid">
+    <div class="row">
+        <aside-submenu [toggleflag]="submenu"  [menu]="asideSubMenu" (togglemenu)="toggleMenu(e);">
+        </aside-submenu>
+
+        <div class="main">
+            <div class="container-fluid">
+                <div [ngSwitch]="view">
+                    <div *ngSwitchCase="'dashboard'">
+                        <instructor-dashboard></instructor-dashboard>
+                    </div>
+                    <div *ngSwitchCase="'courses'">
+                        <instructor-networks></instructor-networks>
+                    </div>
+                    <div *ngSwitchCase="'students'">
+                        <instructor-students></instructor-students>
+                    </div>
+                    <div *ngSwitchCase="'discussions'">
+                        <instructor-chats></instructor-chats>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

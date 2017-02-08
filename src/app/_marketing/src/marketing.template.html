@@ -1,0 +1,35 @@
+<marketing-top-nav [l]="l.nav" [fixed]="fixed" (togglemenu)="toggleMenu()"></marketing-top-nav>
+<div class="container-fluid" [ngClass]="{'dropdown-backdrop': menu}">
+    <div class="row">
+        <div class="col-xs-12">
+            <div [ngSwitch]="view">
+                <div *ngSwitchCase="'null'">
+                    <marketing-home [l]="l.home"></marketing-home>
+                </div>
+                <div *ngSwitchCase="'login'">
+                    <sign-in [l]="l"></sign-in>
+                </div>
+                <div *ngSwitchCase="'register'">
+                    <register [l]="l" [network]="id"></register>
+                </div>
+                <div *ngSwitchCase="'reset-password'">
+                    <reset-password [l]="l"></reset-password>
+                </div>
+                <div *ngSwitchCase="'account-activation'">
+                    <account-activation [l]="l"></account-activation>
+                </div>
+                <div *ngSwitchCase="'courses'">
+                    <marketing-networks [show]="0" *ngIf="!title"></marketing-networks>
+                    <marketing-networks [show]="title" *ngIf="title"></marketing-networks>
+                </div>
+                <div *ngSwitchCase="'conversations'">
+                    <marketing-chats></marketing-chats>
+                </div>
+                <div *ngSwitchCase="'comrades'">
+                    <marketing-users></marketing-users>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<marketing-footer *ngIf="view == 'courses' || view == 'null'"></marketing-footer>

@@ -40,7 +40,7 @@ module.exports = {
       loader: 'raw-loader'
     },{
       test: /\.(ttf|eot|svg|woff|woff2)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-      loader: 'file?name=assets/fonts/[name].[ext]'
+      loader: 'file?name=fonts/[name].[ext]'
     }]
   },
 
@@ -55,11 +55,12 @@ module.exports = {
     new LodashModuleReplacementPlugin,
     new HTMLPlugin({
       template: 'src/index.html',
+      filename: '../index.html',
       chunksSortMode: 'dependency'
     }),
     new CopyWebpackPlugin([{
-      from: 'src/assets',
-      to: 'assets'
+      from: 'src/assets/img',
+      to: 'img'
     }]),
     new webpack.ResolverPlugin(
       new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('.bower.json', ['main'])

@@ -1,0 +1,24 @@
+.select-comp {
+  font-size: 1.1em;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+  padding: 0 10px;
+  .btn {
+    border-color: #FFF;
+    background: #FFF;
+    font-weight: bolder;
+    color: #0275d8;
+  }
+  &.text-md-right {
+    /deep/ .dropdown-menu {
+      right: -10px;
+      left: auto;
+      min-width: 200px;
+      margin-top: 5px;
+    }
+  }
+  /deep/ .dropdown-menu {
+    margin-top: 5px;
+  }
+
+}

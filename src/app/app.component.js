@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import template from './core/layout/app.template.html';
-import style from './core/layout/app.style.scss';
+import template from './app.template.html';
+import style from './app.style.scss';
 
 @Component({
   selector: 'app',

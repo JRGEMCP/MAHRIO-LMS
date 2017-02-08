@@ -1,0 +1,17 @@
+.card {
+  padding-bottom: 100px;
+  .card-instructor {
+    padding: 20px;
+    bottom: 0;
+    div {
+      display: table-cell;
+      vertical-align: middle;
+      &.main {
+        width: 10000px;
+      }
+    }
+  }
+}
+.v-align-middle {
+  vertical-align: middle;
+}

@@ -1,8 +1,10 @@
 switch( process.env.NODE_ENV ) {
-  case 'DEV':
-  case 'dev':
-  case 'DEVELOPMENT':
-  case 'development':
+  case 'PROD':
+  case 'prod':
+  case 'PRODUCTION':
+  case 'production':
+    module.exports = require('./config/webpack.prod');
+    break;
   default:
-    module.exports = require('./config/webpack.dev')
+    module.exports = require('./config/webpack.dev');
 }
