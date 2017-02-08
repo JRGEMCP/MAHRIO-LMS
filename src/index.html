@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mahr.io - Learning Management System</title>
-    <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <base href="/">
-  </head>
-  <body>
-    <app>Loading...</app>
-
-  </body>
+<head>
+  <title>Mahr.io - Learning Management System</title>
+  <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <base href="/">
+</head>
+<style>
+  #spinner-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: white;
+    z-index: 99999;
+  }
+  #ng-app { display: none; }
+</style>
+<body>
+<div id="seo-content">
+  <div>SEO - Loaded</div>
+</div>
+<div id="ng-app">
+  <app></app>
+</div>
+<div id="spinner-overlay">Spinner Loading</div>
+</body>
+<script type="text/javascript" src="./assets/inline.js"></script>
+<script type="text/javascript" src="./assets/styles.js"></script>
+<script>
+  var elem = document.createElement('script');
+  elem.src = './assets/main.js';
+  elem.onload = function(){
+    document.getElementById('spinner-overlay').style.display = 'none';
+    document.getElementById('seo-content').style.display = 'none';
+    document.getElementById('ng-app').style.display = 'block';
+  };
+  document.head.appendChild(elem);
+</script>
 </html>
