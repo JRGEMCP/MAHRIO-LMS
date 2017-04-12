@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <%- include includes/head.ejs %>
+<body id="learning">
+    <div id="seo-content">
+        <% if( typeof page !== 'undefined' && page ) { %>
+            <%- include transclude/content %>
+        <% } else if( typeof article !== 'undefined' && article){ %>
+            <%- include transclude/article %>
+        <% } %>
+    </div>
+
+    <navigation></navigation>
+    <div id="ng-app">
+        <app></app>
+    </div>
+
+    <div id="spinner-overlay"><div class="loader"></div></div>
+</body>
+    <%- include includes/scripts.ejs %>
+</html>

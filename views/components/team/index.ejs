@@ -1,0 +1,36 @@
+<!-- TEAM
+<% var team = page.sections[i].content; %>
+<%- JSON.stringify(team) %>
+-->
+<section id="team">
+    <div class="container text-center">
+        <div class="col-xs-12">
+            <div class="headline text-center withH2">
+                <h1>Meet Our Team</h1>
+            </div>
+            <div class="row">
+                <% for(var x = 0, l = team.members.length; x < l; x++){
+                    var item = team.members[x]; %>
+                <div class="col-md-4">
+                    <div class="profile-wrapper img-rounded">
+                        <img src="<%=item.img%>" class="img-responsive">
+                        <div class="caption" style="bottom: -75px;">
+                            <div class="caption-text">
+                                <div class="text-row-name"><%=item.name%></div>
+                                <div class="text-row-role"><%=item.role%></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+            </div>
+            <% if( team.careers ) { %>
+                <br/>
+                <br/>
+                <div class="headline text-center withH2">
+                    <%= team.careers%>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</section>

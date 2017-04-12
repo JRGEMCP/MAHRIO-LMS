@@ -1,0 +1,43 @@
+<!-- FEATURED
+<% var featured = page.sections[i].content; %>
+<%- JSON.stringify(featured) %>
+-->
+<style type="text/css">
+    .featured-item {
+        clear: both;
+        padding: 30px 0;
+    }
+    .featured-item img {
+        max-width: 500px;
+    }
+    .m-l {
+        margin-left: 30px;
+    }
+    .m-r {
+        margin-right: 30px;
+    }
+    section.header {
+        padding-bottom: 0;
+    }
+</style>
+
+<h1 class="hidden">Featured:</h1>
+<section class="heading">
+    <div class="container">
+        <% for( var x = 0, f = featured.sections.length; x < f; x++){
+            var item = featured.sections[x]; %>
+            <div class="featured-item">
+                <img src="<%=item.img%>" class="<%=(x % 2) ? 'pull-left m-r' : 'pull-right m-l' %>">
+                <h2 class="featurette-heading">
+                    <%= item.heading %>
+                    <span class="text-muted">
+                        <%= item.headingMuted %>
+                    </span>
+                </h2>
+                <p>
+                    <%= item.blurb %>
+                </p>
+            </div>
+        <% } %>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+<script type="text/ng-template" id="/marketing.html">
+    <div class="container-fluid">
+        <div class="row">
+            <div ng-if="!vm.view">
+                <home>
+                    <%- include ../transclude/content.ejs %>
+                </home>
+            </div>
+
+            <ng-switch on="vm.view">
+                <articles ng-switch-when="articles"></articles>
+                <four-zero-four app="M" ng-switch-when="404"></four-zero-four>
+
+                <login ng-switch-when="login"></login>
+                <register ng-switch-when="register"></register>
+                <reset-password ng-switch-when="reset-password"></reset-password>
+            </ng-switch>
+        </div>
+    </div>
+</script>

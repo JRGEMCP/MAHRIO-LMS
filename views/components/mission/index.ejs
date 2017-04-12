@@ -1,0 +1,20 @@
+<!-- MISSION
+<% var mission = page.sections[i].content; %>
+<%- JSON.stringify(mission) %>
+-->
+<section style="background-image: url('<%=mission.bg%>');" class="mission-quote">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <h3><%=mission.heading%></h3>
+                <p><%=mission.subHeading%></p>
+                <hr class="section-divider">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <h1><%=mission.statement%></h1>
+            </div>
+        </div>
+    </div>
+</section>

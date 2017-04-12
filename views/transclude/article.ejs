@@ -1,0 +1,14 @@
+<% if( typeof article.coverImage !== 'undefined' ) { %>
+    <img src="<%-article.coverImage.url%>" style="max-width: 100%; margin-top: -170px"/>
+<% } %>
+<div class="container">
+    <h1>
+        <%- article.title %>
+    </h1>
+    <p>
+        <%- article.deck %>
+    </p>
+    <p>
+        <%- article.created %>
+    </p>
+</div>

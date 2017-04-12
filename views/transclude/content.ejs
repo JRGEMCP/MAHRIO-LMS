@@ -1,0 +1,37 @@
+<%
+    for (var i = 0, l = page.sections.length; i < l; i++) {
+        var key = page.sections[i].key.split('-');
+        switch (key[0]) {
+            case 'heading':
+%>          <%- include ../components/heading/index.ejs %>  <%
+                break;
+            case 'feature':
+%>          <%- include ../components/featured/index.ejs %> <%
+            break;
+            case 'highlight':
+%>          <%- include ../components/highlight/index.ejs %> <%
+                break;
+            case 'mission':
+%>          <%- include ../components/mission/index.ejs %> <%
+                break;
+            case 'article':
+%>          <%- include ../components/articles/index.ejs %> <%
+                break;
+            case 'contact':
+%>              <contact></contact> <%
+                break;
+            case 'team':
+%>          <%- include ../components/team/index.ejs %> <%
+                break;
+            case 'carousel':
+
+                break;
+            case 'custom':
+%>          <%- page.sections[i].content %> <%
+                break;
+            case 'footer':
+%>          <%- include ../components/footer/index.ejs %> <%
+                break;
+        }
+    }
+%>

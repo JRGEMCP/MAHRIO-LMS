@@ -1,0 +1,40 @@
+<!-- ARTICLES
+<% var articles = page.sections[i].content; %>
+<%- JSON.stringify(articles) %>
+-->
+<section id="articles">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1><%=articles.heading%></h1>
+                <p><%=articles.subHeading%></p>
+                <hr class="section-divider">
+            </div>
+        </div>
+        <div class="row text-left">
+            <% for(var x = 0, l = articles.content.length; x < l; x++){
+                var item = articles.content[x]; %>
+                <div class="col-md-4 col-lg-4">
+                    <div class="blog-preview-content">
+                        <h3>
+                            <a href="<%=item.link%>">
+                                <%=item.title%>
+                            </a>
+                        </h3>
+                        <p><%=item.deck%></p>
+                        <div class="continue">
+                            <a href="<%=item.link%>">
+                                Read More →
+                            </a>
+                        </div>
+                        <ul class="meta list-inline">
+                            <li><%=item.published%></li>
+                            <li>|</li>
+                            <li><%=item.writer%></li>
+                        </ul>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,13 @@
+<script type="text/javascript" src="./assets/inline.js"></script>
+<script type="text/javascript" src="./assets/styles.js"></script>
+<script>
+    var elem = document.createElement('script');
+    elem.src = './assets/main.js';
+    elem.onload = function(){
+        document.getElementById('spinner-overlay').style.display = 'none';
+        document.getElementById('seo-content').style.display = 'none';
+        document.getElementById('seo-content').innerHTML = '';
+        document.getElementById('ng-app').style.display = 'block';
+    };
+    document.head.appendChild(elem);
+</script>

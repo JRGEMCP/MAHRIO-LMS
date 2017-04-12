@@ -1,0 +1,18 @@
+<!-- FOOTER
+<% var footer = page.sections[i].content; %>
+<%- JSON.stringify(footer) %>
+-->
+
+<footer style="background: #e3e3e3;" class="footer">
+    <div class="container text-center">
+        <div class="row copyright">
+            <div class="col-lg-12">
+                <h4 class="text-white">  © 2010 - 2015&nbsp;
+                    <% if (footer.name) { %>
+                        <%= footer.name%>
+                    <% } %>
+                </h4>
+            </div>
+        </div>
+    </div>
+</footer>
