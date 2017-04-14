@@ -14,6 +14,10 @@ export class InstructorService{
           icon: 'fa-mortar-board',
           link: '/i/courses'
         },{
+          label: 'Articles',
+          icon: 'fa-book',
+          link: '/i/articles'
+        },{
           label: 'Students',
           icon: 'fa-users',
           link: '/i/students'
