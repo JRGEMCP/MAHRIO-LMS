@@ -1,0 +1,29 @@
+ .milestone {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 35px 2px;
+
+    a, a:hover {
+        text-decoration: none;
+        color: black;
+        font-weight: 700;
+        font-size: 0.95rem;
+        font-size: 0.95rem;
+        display: flex;
+        cursor: pointer; // Hacky, but I rather not have a wrong # url in the status bar in the browser
+    }
+    span {
+        font-size: 0.95rem;
+        display: flex;
+    }
+
+    .check {
+        margin: 0 5px;
+    }
+
+    .disabled {
+        color: #d0cece;
+    }
+}
