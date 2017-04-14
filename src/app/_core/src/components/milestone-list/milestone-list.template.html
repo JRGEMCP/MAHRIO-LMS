@@ -1,0 +1,39 @@
+<span class="inactive" *ngIf="!section.isActive && !section.isComplete">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+        <circle cx="12.5" cy="12.5" r="11.5" fill="none" stroke="#B8B8B8"/>
+    </svg>
+</span>
+<span class="active" *ngIf="section.isActive && !section.isComplete">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <circle id="a" cx="12.5" cy="12.5" r="12.5"/>
+        <mask id="b" width="25" height="25" x="0" y="0" fill="white">
+        <use xlink:href="#a"/>
+        </mask>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <use stroke="#55ACEE" stroke-width="2" mask="url(#b)" xlink:href="#a"/>
+        <circle cx="12.6" cy="12.5" r="3" fill="#55ACEE"/>
+    </g>
+    </svg>
+</span>
+<span class="complete" *ngIf="section.isComplete">
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+    <g fill="none" fill-rule="evenodd">
+        <circle cx="12.5" cy="12.5" r="12.5" fill="#228023"/>
+        <polyline stroke="#FFFFFF" stroke-width="2" points="7.714 14.442 11.822 17.928 17.734 7.67" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    </svg>
+</span>
+<h5 (click)="toggle()">{{ section.text }}</h5>
+<span  *ngIf="section.isExpanded">
+    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="10" viewBox="0 0 19 11">
+        <polyline fill="none" stroke="#979797" stroke-width="2" points="3.634 7.533 15.682 7.533 15.682 -4.631" transform="rotate(45 9.658 1.45)" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</span>
+<span *ngIf="!section.isExpanded">
+    <svg xmlns="http://www.w3.org/2000/svg" width="9" height="12" viewBox="0 0 10 18">
+        <polyline fill="none" stroke="#979797" stroke-width="2" points="-5.366 15.533 6.682 15.533 6.682 3.369" transform="rotate(-45 .658 9.45)" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</span>
+
