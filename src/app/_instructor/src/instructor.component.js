@@ -27,6 +27,7 @@ export class InstructorComponent {
       case 'courses':
       case 'students':
       case 'discussions':
+      case 'articles':
         break;
       default:
         //this.router.navigateTo('i/dashboard');
