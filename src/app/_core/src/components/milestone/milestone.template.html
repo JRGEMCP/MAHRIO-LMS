@@ -1,0 +1,12 @@
+<div class="milestone" [ngClass]="{'active': milestone.isActive}">
+    <a (click)="click($event)" *ngIf="milestone.isActive">{{ milestone.text }}</a>
+    <span class="disabled" *ngIf="milestone.isInactive">{{ milestone.text }}</span>
+    <span class="check" *ngIf="milestone.isChecked">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="11" viewBox="0 0 15 11">
+            <polyline fill="none" stroke="#21AD7A" stroke-width="2" points="7.566 14.61 11.674 18.097 19.338 9.076" transform="rotate(3 163.206 -104.979)" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </span>
+    <span class="lock" *ngIf="milestone.isLocked">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 39"><path fill="none" stroke="#F74E4E" stroke-width="2" d="M6.6 14.6C6.6 14.6 6.6 14.5 6.6 8.8 6.6 6.2 9.4 1.7 14.7 1.7 20 1.7 22.8 6.1 22.8 8.8L22.8 14.6 6.6 14.6ZM8 14.6C4.1 14.6 1 17.7 1 21.6L1 33.7C1 35.9 2.8 37.7 5 37.7L24.7 37.7C27 37.7 28.7 35.9 28.7 33.7L28.7 21.6C28.7 17.7 25.6 14.6 21.7 14.6L8 14.6Z"/></svg>
+    </span>
+</div>
