@@ -1,0 +1,6 @@
+export function Enum() {
+    if (!(this instanceof Enum)) return new Enum(...arguments)
+    Array.from(arguments).forEach(arg => {
+        this[arg] = Symbol(arg)
+    })
+};
