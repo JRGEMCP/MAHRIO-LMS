@@ -1,0 +1,14 @@
+<div>
+    <h5 class="header">Article Lifecycle</h5>
+
+    <div class="milestone-section" *ngFor="let section of sections">
+        <div class="milestone-header">
+            <milestone-list [section]="section" (onToggle)="sectionToggled(section.name)"></milestone-list>
+        </div>
+        <div class="milestone-content" *ngIf="section.isExpanded">
+            <milestone [milestone]="milestone" *ngFor="let milestone of section.milestones"
+                (onSelect)="selectMilestone(milestone.name)"></milestone>
+        </div>
+    </div>
+
+</div>
