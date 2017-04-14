@@ -1,0 +1,16 @@
+:host {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    h5 {
+        padding: 0 10px;
+        font-weight: 700;
+        margin-bottom: 0;
+        cursor: pointer;
+    }
+}
+
+.active, .inactive, .complete {
+    display: flex;
+}
